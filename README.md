@@ -1,4 +1,4 @@
-Clarinet-Music
+ClarinetMusic
 ==============
 
 1. Classical - Orchestral parts for the Clarinet.
