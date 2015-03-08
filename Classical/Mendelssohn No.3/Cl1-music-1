@@ -1,0 +1,37 @@
+\version "2.14.2"
+cCompositeur = \markup { "Felix MENDELSSOHN" }
+cDatesCompositeur = "(1809-1847)"
+cTitre = "Symphony No. 3 in A Minor, Op. 56"
+cSousTitre = "Scottish"
+cRefConcert = "OP56"
+
+
+%%%% Mouvements
+
+AstringTempo = \tempo 
+               \markup {\bold "Andante con moto"}
+		4=72		
+Atime = \time 3/4
+Akey = \key c \minor
+
+BstringTempo = \tempo 
+               \markup {\bold "Allegro un poco agitato"}
+		4.=100
+Btime = \time 6/8
+
+CstringTempo = \tempo
+		\markup {\halign #0 \bold "Assai animato"}
+		4.=120
+		
+DstringTempo = \tempo
+		\markup {\bold "Andante come prima"}
+		4=72
+Etitle = \markup {\column \line {"in Bb"} \line}
+EstringTempo = \tempo
+		\markup {\halign #0 \bold "Vivace non troppo"}
+		4=126
+Etime = \time 2/4
+Ekey  = \key g \major
+
+
+

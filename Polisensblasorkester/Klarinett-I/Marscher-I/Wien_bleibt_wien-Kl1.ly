@@ -35,7 +35,7 @@ OneBR = R1^\markup{\normalsize\number 1}
     	    }
     	    
     	    \repeat volta 2 {
-    	    	    a2.\f (e4) |f (f a f) |e4. bes'8 bes4 bes | bes1 |bes2. (e,4)
+    	    	    a2.\f (e4) |f f (a f) |e4. bes'8 bes4 bes | bes1 |bes2. (e,4)
     	    	    f e bes' (e,) |f4.a8 a4 a |a1 |a2. (c,4) 
     	    	    ees-. (ees-. ees-. ees-.) | d4. g8 g4 g |gis2. gis4 |a r r2 
     	    	    \OneBR |bes4 r bes r }
@@ -53,8 +53,8 @@ OneBR = R1^\markup{\normalsize\number 1}
     	    	    bes4->\fz r a8 r g r |fis4 r g8 r bes r |a2 fis4. g8 |g1
     	    	    a2 fis4. g8 |g1 |g2 e4. f8 |f1 |f2 (bes4 fis) |g2 bes |a1
     	    	    a |f2 (a4 fis) |g2 a |f!1 |f |r2 bes4.\f bes8 |bes2 a4 aes
-    	    	    g2. f4 |c2 fis |f!2. f4 |c2. f4 |bes r 
-    	    	    \afterGrace a2\trill { g16[ a] } |bes4 bes8 bes r4 
+    	    	    g2. f4 |c'2 fis, |f!2. f4 |c'2. f,4 |bes r 
+    	    	    \afterGrace a2\trill { g16[ a] } |bes4 bes8 bes bes4 r 
     	    	   
     	    }
     }%end relative

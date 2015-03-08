@@ -69,7 +69,7 @@
     	    	{c'2-> c->      | % 38
     	    	bes4-> g8-.  c-.  bes  (g)  ees-.  c-. | % 39
     	    	bes'4-. r d2->\trill | % 40
-    	    	\acciaccatura {c16 d} g4 r r2      | % 41
+    	    	\acciaccatura {c16 d} ees4 r r2      | % 41
     	    	}
     	    	{ d,4 r8 b' b4 b      | % 42
     	    	b b g b      | % 43
@@ -123,7 +123,7 @@
     a1      | % 85
     a2.( c4)      | % 86
     d( f e4. d8)      | % 87
-    a'4 e,8\< (a cis4) a8( c      | % 88
+    a'4 e,8\< (a cis4) a8( cis      | % 88
     e4) r bes'4.-> ( \f a8)      | % 89
     g2.( f4)      | % 90
     des2( f)      | % 91

@@ -44,10 +44,10 @@
 %Rehearsal mark 4
 	\mark \default
 	\key c \major
-	g4 g4. g8 |a4 a4. a8 |b4 b4. b8 |c4_\markup {rall........} d4. b8 
+	g4 g4. g8 |a4 a4. a8 |b4 b4. b8 |c4^\markup {rall........} d4. b8 
 	\times 2/3 {a8 (b a} g2~)
 	g2.~ |g~ |g2 r8 d\mf |g4 g4. g8 |a4 a4. a8 |b4 b4. b8 
-	c4 d4. b8 
+	c4^\markup {rall........} d4. b8 
 	c16 (d c b a2~)|a2.~ |a~ |a2 r8 e\mf
 	
 %Rehearsal mark 5

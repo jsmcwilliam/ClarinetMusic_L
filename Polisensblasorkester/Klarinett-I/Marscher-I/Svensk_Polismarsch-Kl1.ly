@@ -33,7 +33,7 @@
  	    \repeat percent 2 {r4 c\f r c} |r c8 c c4 c |c r r2
  	    \repeat percent 2 {r4 d r d} |r d8 d d4 d 
  	    d r bes8\f (a bes a |g4) r f-. r |e-. r d-. r |c2. (f4) 
- 	    c2 a'8 (bes c d) |e2. (bes4) |bes2 bes8 (c d e) |f2. (c4) 
+ 	    c2 a'8 (bes c d) |c2. (bes4) |bes2 bes8 (c d e) |f2. (c4) 
  	    a2 g4.\p a8 |bes4 r c\cresc r 
 	    d r e, r |f2~ (f8 e f g)\! |aes2.->\ff r4 |r b8-> b-> b4-> r
 	    r c8-> c-> c4-> e8 d |c4 cis-> d-> e->  
