@@ -4,8 +4,9 @@
 %					  header.
 %Comment out from here
 %{
-#(set-default-paper-size "a5" 'landscape)
-#(set-global-staff-size 15) % set staff-size when ready to print
+#(ly:set-option 'point-and-click #t)
+#(set-default-paper-size "a4" 'portrait)
+#(set-global-staff-size 18) % set staff-size when ready to print
 
 \include "Marsch_format.ly"
 
@@ -23,7 +24,7 @@
 
 %Rehearsal mark bar 5    	    
     	    \mark \default
-    	    e,,1~\mp |e |e~ |e |c~\( |c |e2\) r8 e'\mf\< ( g c) 
+    	    e,,1~\mp |e |e~ |e |c~\( |c |e2\) r8 e'\mf\noBeam\< ( g c) 
     	    c4\f c2.->\> 
     	    
 %Rehearsal mark bar 13    	    
@@ -36,24 +37,24 @@
 %Rehearsal mark bar 21    	    
     	    \mark \default
     	    e2.\f) e8 (f | e4 d8 c c d4.) |r4 e8 ([f] e4 d8 c~ 
-    	    c4 e8 d c4) c8 (g'-.) |c4 a8 (e-.) g (a->) r4 |r2 r8 g-- a-. c~->
+    	    c4 e8 d c4) c8 (g'-.) |c4 a8 (e-.) g (a->) r4 |r2 r8 g--\noBeam a-. c~->
     	    c4 a8-- (g-.) a (c->) r c-. |c (a g4-^) r2
     	    
 %Rehearsal mark bar 29    	    
     	    \mark \default
-    	    g1 ( |a) |a~ |a |g ( |a) |r4 c8-- g-. a-- c-. r c-. 
+    	    g1\f ( |a) |a~ |a |g ( |a) |r4 c8-- g-. a-- c-. r c-. 
     	    c (a g4-^) r c8-- a~-> |a a-. a-- a-. a-- f-. r a-. |c (a g4-^) r2
     	    
 %Rehearsal mark bar 39    	    
     	    \mark \default
-    	    a1\mf \( |c~ |c2\) r8 e,\< (g c) |c4-^\f c2.->\> |a1\mf \( |c~ 
+    	    a1\mf \( |c~ |c2\) r8 e,\noBeam\< (g c) |c4-^\f c2.->\> |a1\mf \( |c~ 
     	    c2.\) g4 ( |g\< c2)\! r4 
     	    
 %Rehearsal mark bar 47   	    
     	    \mark \default
     	    g1\f ( |a) |a~ |a |g ( |a) |r4 c8-- g-. a-- c-. r c-. 
     	    c (a g4-^) r c8-- a~-> |a a-. a-- a-. a-- f-. r a-. |c (a g4-^) r2
-    	    r2 r8 e\< (g c) |c4-^\f c2.->\> <>\! |r2 r8 e,\< (g c) 
+    	    r2 r8 e\noBeam\< (g c) |c4-^\f c2.->\> <>\! |r2 r8 e,\noBeam\< (g c) 
     	    c4-^\f c2.->\fermata \bar "|." 
     }%end relative
     \header {

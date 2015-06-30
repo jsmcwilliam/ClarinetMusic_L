@@ -4,8 +4,9 @@
 %					  header.
 %Comment out from here
 %{
+#(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a5" 'landscape)
-#(set-global-staff-size 15) % set staff-size when ready to print
+#(set-global-staff-size 18) % set staff-size when ready to print
 
 \include "Marsch_format.ly"
 

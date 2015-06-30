@@ -2,11 +2,12 @@
 % When ready to include in collection: 1. Comment out paper.
 % 				       2. Create include file of relative and
 %					  header.
-%Comment out from here
+%Comment out from here  
 %{
-#(set-default-paper-size "a5" 'landscape)
-%#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 15) % set staff-size when ready to print
+#(ly:set-option 'point-and-click #t)
+%#(set-default-paper-size "a5" 'landscape)
+#(set-default-paper-size "a4" 'portrait)
+#(set-global-staff-size 18) % set staff-size when ready to print
 
 OneBR = R1^\markup{\normalsize\number 1}
 
@@ -14,6 +15,7 @@ OneBR = R1^\markup{\normalsize\number 1}
 
 %...to here
 %}
+
   \score {
 
     % Svenska Polisens Marscher: 1. Title    
@@ -49,7 +51,8 @@ OneBR = R1^\markup{\normalsize\number 1}
 	    	    {r4 f,8 f f4 r \bar "||"}
 	    }
 	    \key bes \major
-	    bes4\f^\markup {\bold {TRIO}} r bes r |bes r bes r |a r r2 |\OneBR
+	    \mark \markup {\bold {TRIO}}
+	    bes4\f r bes r |bes r bes r |a r r2 |\OneBR
 	    \bar "||"
 	    d,,1\mf |c2 (bes) |g2. (bes4 |f1) |d' |g2 (d)|f4. (e8 ees2~ |ees1)
 	    ees |d2 (c) |g2. (bes4 |a2) g |f \times 2/3 {a4 c f} |a2 (g4.) ges8

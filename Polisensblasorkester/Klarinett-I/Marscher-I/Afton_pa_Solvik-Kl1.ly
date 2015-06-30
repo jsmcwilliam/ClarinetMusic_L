@@ -5,8 +5,8 @@
 %Comment out from here
 
 %{
-#(set-default-paper-size "a5" 'landscape)
-#(set-global-staff-size 15) % set staff-size when ready to print
+#(set-default-paper-size "a4" 'portrait)
+#(set-global-staff-size 18) % set staff-size when ready to print
 #(ly:set-option 'point-and-click #t)
 
 \include "Marsch_format.ly"
@@ -25,7 +25,7 @@
     	    \mark \markup { \musicglyph #"scripts.segno" }
 
     	    R2.*3 |b4\mf^\markup {\bold {Soli}} \(c cis |d\< (b'2->\)) 
-    	    fis4 a2-> |g4\> (e2~-> |e\!) r4 |R2.*2 |r8 b\mf (dis fis b dis 
+    	    fis4 a2-> |g4\> (e2~-> |e\!) r4 |R2.*2 |r8 b\mf (dis [fis b dis] 
     	    e2\trill )
     	    
     	    <<{\set fontSize = #-4  % make note heads smaller
@@ -38,7 +38,7 @@
     	       	    
     	    fis,2.-> |g ( |g' |d) |b4\mf^\markup {\bold {Soli}} \(c cis 
     	    d\< (b'2->\)) |fis4 a2-> |g4\> (e2~-> |e\!) r4 |R2.*2 
-    	    |r8 b\mf (dis fis b dis 
+    	    |r8 b\mf (dis [fis b dis] 
     	    e2\trill )
     	    
     	    <<{\set fontSize = #-4  % make note heads smaller
@@ -86,18 +86,19 @@
 \break
 
 % Coda on new line, use this:
-     \once \override Score.RehearsalMark.extra-offset = #'( -8.42 . 1.75 )
+%     \once \override Score.RehearsalMark.extra-offset = #'( -8.42 . 1.75 )
      \once \override Score.RehearsalMark.font-size = #4
      \mark \markup { \musicglyph #"scripts.coda" }
 
    % The coda
-	r8 g,\p\< (a b c d)
+	r8 g,\p\< (a [b c d])
 	\key c \major
+	\mark \markup {\bold {TRIO}}
 	\repeat volta 2 {
-		e2\f^\markup {\bold {\box TRIO Meno Mosso}} g4 |f!2 e4 |g2 e'4 
+		e2\mf^\markup {"Meno mosso"}  g4 |f!2 e4 |g2 e'4 
 		d2 c4 |a2 b4
-		a2 g4 |f2.~ |f |d2 f4 |e2 d4 |f2 f'4 |e2 b4 
-		r8 dis, e (g) a c |r8 dis, fis (a) b c |r8 fis, g (b) d b 
+		a2 g4 |f2.~ |f |d2 f4 |e2 d4 |f2 <f f'>4 |<e e'>2 <b b'>4 
+		r8 dis e [(g) a c] |r8 dis, fis [(a) b c] |r8 fis, g [(b) d b] 
 		g2.\trill |e2--^\markup {\bold {Soli}} g4 |f2 (e4) |g2-- e'4
 		d2 c4 |R2.*4 
 
@@ -120,6 +121,6 @@
     }%end relative
     \header {
     	    piece = \markup {\concat {"Afton p" \char #229 " Solvik"}}
-    	    composer = "Olle Jonbrink"
+    	    composer = \markup {\concat {"Olle J" \char#246 "nbrink"}}
     	}
   }%end score

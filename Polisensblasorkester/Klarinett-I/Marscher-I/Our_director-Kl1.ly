@@ -5,8 +5,8 @@
 %Comment out from here
 %{
 #(ly:set-option 'point-and-click #t)
-#(set-default-paper-size "a5" 'landscape)
-#(set-global-staff-size 15) % set staff-size when ready to print
+#(set-default-paper-size "a4" 'portrait)
+#(set-global-staff-size 18) % set staff-size when ready to print
 #(allow-volta-hook "||")
 
 \include "Marsch_format.ly"
@@ -48,7 +48,8 @@
     	    	    }
     	    	    
     	  \key f \major
-    	   \grace {c16 (d e)} f4->\ff^\markup {\bold TRIO} r8 f4-> r8 
+    	  \mark \markup {\bold TRIO}
+    	  \grace {c16 (d e)} f4->\ff r8 f4-> r8 
     	  f4-> r8 \mark \markup { \musicglyph #"scripts.coda" } r4 r8
     	  R2.*7 
     	  r4\mf \mark \markup { \musicglyph #"scripts.coda" } r8

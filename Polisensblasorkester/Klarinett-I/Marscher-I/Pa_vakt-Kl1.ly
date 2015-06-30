@@ -5,7 +5,7 @@
 %Comment out from here
 %{
 #(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 15) % set staff-size when ready to print
+#(set-global-staff-size 18) % set staff-size when ready to print
 #(allow-volta-hook "||")
 
 \include "Marsch_format.ly"
@@ -53,7 +53,8 @@
 	    }
 	    \bar "||"
 	    \key ees \major \time 2/2
-	    bes2->^\markup {\bold "TRIO"} d4-. c-. bes4.->\trill a16 (bes) 
+	    \mark \markup {\bold "TRIO"}
+	    bes2-> d4-. c-. bes4.->\trill a16 (bes) 
 	    d4.->\trill c16 (d) |ees4 r r2 |R1
 
 	    \repeat volta 2 {

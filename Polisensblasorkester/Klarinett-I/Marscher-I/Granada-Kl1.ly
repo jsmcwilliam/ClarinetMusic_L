@@ -4,9 +4,9 @@
 %					  header.
 %Comment out from here
 %{
-#(set-default-paper-size "a5" 'landscape)
-%#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 14) % set staff-size when ready to print
+%#(set-default-paper-size "a5" 'landscape)
+#(set-default-paper-size "a4" 'portrait)
+#(set-global-staff-size 18) % set staff-size when ready to print
 
 \include "Marsch_format.ly"
 

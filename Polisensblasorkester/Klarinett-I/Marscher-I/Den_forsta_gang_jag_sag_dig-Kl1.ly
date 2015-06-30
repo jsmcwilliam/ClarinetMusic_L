@@ -4,8 +4,9 @@
 %					  header.
 %Comment out from here
 %{
-#(set-default-paper-size "a5" 'landscape)
-#(set-global-staff-size 15) % set staff-size when ready to print
+#(ly:set-option 'point-and-click #t)
+#(set-default-paper-size "a4" 'portrait)
+#(set-global-staff-size 18) % set staff-size when ready to print
 
 \include "Marsch_format.ly"
 
@@ -19,7 +20,7 @@
     	    \key bes \major \time 2/2 
     	    \compressFullBarRests
     	    \set Score.markFormatter = #format-mark-box-letters
-    	    \partial 4 bes'4^\markup {\bold {Modito}}\f ( |g a bes c |d f, bes d) 
+    	    \partial 4 bes'4^\markup {\bold {Moderato}}\f ( |g a bes c |d f, bes d) 
     	    c1~ |c |bes4^\markup {\bold {T:o di Bossa Nova}} r r2 |r r4 f,8 (f' 
     	    c2.) r4 |r2 r4 d4\p ( 
     	    
@@ -49,7 +50,7 @@
 	   \mark \default
 	   \key c \major
 	   r2 d\p |d1 ( |e2 dis | e2.) c'4\mf ( |c b a b |a gis g e 
-	   e f fis a |a2 g) |g4-- g2-- r4
+	   e f fis a |a2 g) \breathe |g4-. g2-- r4
 	   
 %Rehearsal mark E
 	   \mark \default

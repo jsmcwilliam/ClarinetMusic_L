@@ -3,7 +3,7 @@
 % 				       2. Create include file of relative and
 %					  header.
 %Comment out from here
-%
+%{
 #(set-default-paper-size "a5" 'landscape)
 #(set-global-staff-size 18) % set staff-size when ready to print
 
@@ -18,19 +18,11 @@
     	    \key g \major \time 4/4 
     	    \compressFullBarRests
     	    \set Score.markFormatter = #format-mark-box-letters
-    	    \partial 4*1
-    	    b4--( ^\markup {\upright\concat {  "F" \char#246 "rspel"}} \mf     b a g fis      | % 1
-    	    g2 g4-- r | % 2
-    	    R1*2 |
-  	    r4 b d d | % 5
-    	    c c) b d, ( | % 6
-    	    e fis g2 | % 7
-    	    g fis | % 8
-     	    g1~ | % 9
-   	    g2.\fermata)
-   	    
+    	    r2 r4 d,^\markup {\upright\concat {  "F" \char#246 "rspel"}}|
+    	    e g g fis| g2.\fermata
+
     	    \repeat volta 2 {
-    	    	    b4 ^\markup {\upright  "Koral"} \mf      | % 11
+    	    	    b4 ^\markup {\upright  "Koral"} \mf      |
     	    	    b a g fis   | % 12
     	    	    g2 g4 \breathe b      | % 13
     	    	    d d c c     | % 14

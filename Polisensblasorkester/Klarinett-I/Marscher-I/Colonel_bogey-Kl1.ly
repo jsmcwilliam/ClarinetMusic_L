@@ -5,9 +5,9 @@
 %Comment out from here
 %{
 #(ly:set-option 'point-and-click #t)
-#(set-default-paper-size "a5" 'landscape)
-%#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 15) % set staff-size when ready to print
+%#(set-default-paper-size "a5" 'landscape)
+#(set-default-paper-size "a4" 'portrait)
+#(set-global-staff-size 18) % set staff-size when ready to print
 
 \include "Marsch_format.ly"
 
@@ -54,11 +54,13 @@
     	    	ees1-> |bes4-> (g8) r r2 |r4 g (aes g) |bes-. r bes-. r 
     	    	aes1-> |aes4-> (f8) r r2 |r4 c' (d c) |ees-> (bes) r2 
     	    	r4 bes (aes g) |f-> (c') r ees,-. |d-> (bes') r bes |ees,1~ 
-    	    	ees4 r c'8-.\pp c-. c-. c-.
+    	    	ees4 r c'8-.\pp c-. c-. c-. 
+\pageBreak
     	    	
     	    	\repeat volta 2 {
     	    	\key aes \major \time 4/4
-    	    	c4^\markup {\bold {TRIO}}_\markup {\italic {sempre staccato}} r
+    	    	\mark \markup {\bold {TRIO}}
+    	    	c4^\markup {\italic {sempre staccato}} r
     	    	c8-. c-. c-. c-. |c4 r ees r |f-> ees ees2~-> |ees4 r c8 c c c
     	    	b4 r c8-. c-. c-. c-. |aes4 r aes r |aes-> (g) g2~->
     	    	g4 r bes8 a bes c |des4 r c r |ees\> r des r\! 

@@ -4,8 +4,8 @@
 %					  header.
 %Comment out from here
 %{
-#(set-default-paper-size "a5" 'landscape)
-#(set-global-staff-size 17) % set staff-size when ready to print
+#(set-default-paper-size "a4" 'portrait)
+#(set-global-staff-size 18) % set staff-size when ready to print
 
 \include "Marsch_format.ly"
 
@@ -26,7 +26,7 @@
     	    c1~ 
     	    }
   	    \alternative {
-    	    	    {c4 r a2}
+    	    	    {c4 r a2\mf}
     	    	    {c4 r r2}
  	    }
  	    \repeat volta 2 {
@@ -51,19 +51,19 @@
     	    \repeat percent 15 {f4\f r f r} |f r f2
     	    d'1~ |d4 a bes4. g8
     	    \set countPercentRepeats = ##f
-    	    f1~ |f4 a bes d |f,2 bes |f fis | a1 ( |g2) g }
+    	    f1~ |f4 a (bes d) |f,2 bes |f fis | a1 ( |g2) g }
     	    \alternative {
     	    	    {c1~ |c4 bes a4. g8 |f1~ |f4 d (bes g')
     	    	     f2-> ees4.-> (f16 ees)|d2-> c4.-> d16 (c) |bes1~ |bes4 r r2}
-    	    	    {c'1~ |c4\> b c cis\!  |d1~\f |d4 bes (d, g)
+    	    	    {c'1~ |c4\> b c4. cis8\!  |d1~\f |d4 bes (d, g)
     	    	     f2.. e16-. f-. |g4.->\< ( fis16 g) a4.-> ( g16 a)\!
-    	    	     bes1~\ff |bes4-> r r2}
+    	    	     bes1~\fff |bes4-> r r2}
     	    }
     \bar "|."
 
     }%end relative
     \header {
     	    piece = "Svensk Polismarsch"
-    	    composer = "P. Grundström"
+    	    composer = \markup {\concat {"P. Grundstr" \char#246 "m"}}
     	}
   }%end score

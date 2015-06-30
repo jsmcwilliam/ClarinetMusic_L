@@ -7,7 +7,7 @@
 #(ly:set-option 'point-and-click #t)
 
 #(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 15) % set staff-size when ready to print
+#(set-global-staff-size 18) % set staff-size when ready to print
 
 \include "Marsch_format.ly"
 
@@ -28,7 +28,8 @@
 	\mark \default
 	\repeat volta 2 {
 	g4 f r f8 f |f4 e r e8 e |e4 d r d8 d|a'2. a4 |c8 (d) d d d4 e 
-	bes8 bes bes2 c4 |c8 (d) d d d4 e |a,8 a a2 cis4 |d r8 e f4 d 
+	bes8 bes bes2 c4 |c8 (d) d d d4 e |a,8 a a2 cis4 |d r8 e f4 d
+	e4 a,2 a4 |d r8 e f4 d |
 	e4 a,2 c8 (d) |e e e2 e,8 (f) |g8\< g g2 a8 (b) |c4\! r c->\ff r }
 	\alternative {
 		{r2 c,8 (cis) d e}

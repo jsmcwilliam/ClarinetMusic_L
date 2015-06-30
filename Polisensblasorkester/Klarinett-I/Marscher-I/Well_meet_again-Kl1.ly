@@ -4,9 +4,10 @@
 %					  header.
 %Comment out from here
 %{
-#(set-default-paper-size "a5" 'landscape)
+#(ly:set-option 'point-and-click #t)
+#(set-default-paper-size "a4" 'portrait)
 %#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 15) % set staff-size when ready to print
+#(set-global-staff-size 18) % set staff-size when ready to print
 
 OneBR = R1^\markup{\normalsize\number 1}
 

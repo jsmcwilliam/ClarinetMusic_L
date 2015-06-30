@@ -4,8 +4,11 @@
 %					  header.
 %Comment out from here"
 %{
-#(set-default-paper-size "a5" 'landscape)
-#(set-global-staff-size 15) % set staff-size when ready to print
+#(ly:set-option 'point-and-click #t)
+#(set-default-paper-size "a4" 'portrait)
+#(set-global-staff-size 18) % set staff-size when ready to print
+
+ignore = \override NoteColumn #'ignore-collision = ##t
 
 \include "Marsch_format.ly"
 
@@ -24,9 +27,9 @@
     	    \compressFullBarRests
     	    \set Score.markFormatter = #format-mark-box-letters
     	    \override DynamicLineSpanner #'staff-padding = #2
-    	    c'4 d c d\p\< |c d c d \! 
+    	    c'4\p\< d c d |c d c d \! 
     	    <<
-    	    	    { \stemDown c\ff\> ^\markup {Rall.........} d e f 
+    	    	    { \ignore \stemDown c\ff\> ^\markup {Rall.........} d e f 
     	    	      e (d\fermata\mf)\! \stemNeutral\breathe }
     	    \\
     	    	    {\set fontSize = #-4  % make note heads smaller
@@ -49,7 +52,7 @@
 	    e b' b b |b c b c
 	    a g g2~ |g\f d4\< e |f\! 
 	    
-	    << {\stemDown
+	    << {\ignore \stemDown
 	    	e' e2~  e\ff 
 	    	\stemNeutral}
 	       \\
@@ -61,7 +64,7 @@
 	    f'4\fermata e |d c c2~
 	    c e4 d |c2 d4 c |b2 c4 d |e1 
 	    
-	    << {\stemDown
+	    << {\ignore \stemDown
 	    	f2.^^_\markup {Rit......} e4 |d2 e4 d }
 	    \\
 	       {\set fontSize = #-4

@@ -4,8 +4,9 @@
 %					  header.
 %Comment out from here
 %{
-#(set-default-paper-size "a5" 'landscape)
-#(set-global-staff-size 15) % set staff-size when ready to print
+#(ly:set-option 'point-and-click #t)
+#(set-default-paper-size "a4" 'portrait)
+#(set-global-staff-size 18) % set staff-size when ready to print
 
 \include "Marsch_format.ly"
 
@@ -52,9 +53,10 @@
     	    	    {f4 r f,4.\f (e8)}
     	    	    {f'4\repeatTie r r2}	    
     	    }
-    	    \key bes \major \time 2/2    	    
+    	    \key bes \major \time 2/2   
+ 	    \mark \markup {\bold {TRIO}}
     	    \repeat volta 2 {
-    	    bes,4-.\f^\markup {\bold {TRIO}} r bes r 
+    	    bes,4-.\f r bes r 
      	    \repeat percent 6 {bes r bes\mf r} |bes r a r |bes r bes r |bes r bes r 
      	    d,,1~\f
     	    d4 fis a4. d8 |fis1~ |fis2 e!4. d8 |a'4 r fis2~ |fis e!4. d8\p\<

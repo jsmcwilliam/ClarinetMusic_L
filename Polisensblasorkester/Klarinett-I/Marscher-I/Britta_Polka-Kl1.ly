@@ -4,11 +4,11 @@
 %					  header.
 #(allow-volta-hook "||")
 %Comment out from here
-%
+%{
 #(ly:set-option 'point-and-click #t)
-#(set-default-paper-size "a5" 'landscape)
-%#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 14) % set staff-size when ready to print
+%#(set-default-paper-size "a5" 'landscape)
+#(set-default-paper-size "a4" 'portrait)
+#(set-global-staff-size 18) % set staff-size when ready to print
 
 \include "Marsch_format.ly"
 
@@ -21,6 +21,7 @@
     	    \key c \major \time 2/4 
     	    \compressFullBarRests
     	    \set Score.markFormatter = #format-mark-box-letters
+    	    \set Score.explicitKeySignatureVisibility = #begin-of-line-visible
     	    
     	    c'8\ff e,16 f g e c a |g8 b'16 b b8 b |c8 r r4 | r r8 g,\ff
 
@@ -61,32 +62,27 @@
     	    d c bes! g e8 r \bar "||"
     	    
 % \cadenzaOn will suppress the bar count and \stopStaff removes the staff lines.
-    	   \cadenzaOn
-    	   \stopStaff
-      \override Staff.TimeSignature #'break-visibility = #end-of-line-invisible
-      \set Staff.explicitClefVisibility = #end-of-line-invisible 
-      \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible 
-      \set Staff.printKeyCancellation = ##f 
-
-\once \override TextScript.extra-offset = #'( 2 . -4.5 )
+     \cadenzaOn
+    	 \stopStaff
+    	   \override Staff.TimeSignature #'break-visibility = #end-of-line-invisible
+    	   \set Staff.explicitClefVisibility = #end-of-line-invisible 
+    	   \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible 
+    	   \set Staff.printKeyCancellation = ##f 
+    	   
+    	   \once \override TextScript.extra-offset = #'( 2 . -3.5 )
     	   s1*0^\markup { "Trio D.S. al Fine e. Da Capo al Coda" }
-
-
 % Increasing the unfold counter will expand the staff-free space
-           \repeat unfold 6 {
-            s4 s4
-           \bar ""
-           }
+          \repeat unfold 6 {
+          s4 s4
+          \bar "" }
 % Resume bar count and show staff lines again
-           \startStaff
-           \cadenzaOff
-
-           \break
+        \startStaff
+     \cadenzaOff
 
 % Coda on new line, use this:
-%     \once \override Score.RehearsalMark.extra-offset = #'( -8.42 . 1.75 )
-     \once \override Score.RehearsalMark.font-size = #5
-     \mark \markup { \musicglyph #"scripts.coda" }
+     	\break
+     	\once \override Score.RehearsalMark.font-size = #5
+     	\mark \markup { \musicglyph #"scripts.coda" }
 
 % The coda
 	\key c \major \time 2/4

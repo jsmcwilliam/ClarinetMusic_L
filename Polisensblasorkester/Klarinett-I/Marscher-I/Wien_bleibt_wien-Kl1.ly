@@ -4,9 +4,9 @@
 %					  header.
 %Comment out from here
 %{
-#(set-default-paper-size "a5" 'landscape)
-%#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 15) % set staff-size when ready to print
+%#(set-default-paper-size "a5" 'landscape)
+#(set-default-paper-size "a4" 'portrait)
+#(set-global-staff-size 18) % set staff-size when ready to print
 #(allow-volta-hook "||")
 
 OneBR = R1^\markup{\normalsize\number 1}
@@ -15,6 +15,7 @@ OneBR = R1^\markup{\normalsize\number 1}
 
 %...to here
 %}
+
   \score {
 
     % Svenska Polisens Marscher: 1. Title    
@@ -45,10 +46,11 @@ OneBR = R1^\markup{\normalsize\number 1}
     	    }
     	    
     	    \key bes \major
+    	    \mark \markup {\bold TRIO}
     	    R1*2 
     	    
     	    \repeat volta 2 {
-    	    	    d,2-.\p^\markup {TRIO} (d4-. d-.) |d2-.~ d-. |ees1 ( |a) 
+    	    	    d,2-.\p (d4-. d-.) |d2-.~ d-. |ees1 ( |a) 
     	    	    ees2-. (ees4-. ees-.) |ees2-.~ ees-. |d1 ( |g) 
     	    	    bes4->\fz r a8 r g r |fis4 r g8 r bes r |a2 fis4. g8 |g1
     	    	    a2 fis4. g8 |g1 |g2 e4. f8 |f1 |f2 (bes4 fis) |g2 bes |a1

@@ -5,8 +5,9 @@
 %Comment out from here
 
 %{
-#(set-default-paper-size "a5" 'landscape)
-#(set-global-staff-size 14) % set staff-size when ready to print
+#(ly:set-option 'point-and-click #t)
+#(set-default-paper-size "a4" 'portrait)
+#(set-global-staff-size 17) % set staff-size when ready to print
 
 OneBarRest = R2.^\markup{\normalsize\number 1}
 
@@ -25,7 +26,7 @@ OneBarRest = R2.^\markup{\normalsize\number 1}
     	    \repeat volta 2 {
     	    	b8\p [r b] b ais b |g' [r d] d [r b] |c\< [r c] c [r d] 
     	    	e4.~\> e4 c8\!
-    	    	a [r a] a gis a |fis' [r e] e [r c] |b\< [r b] b [r c] 
+    	    	a [r a] a gis a |fis' [r e] e [r c] |b\< [r b] b [r c\!] 
     	    	d4.~ d4 d8
     	    	b\p [r b] b ais b |b'[r g] g [r d] |cis\< [r a'] a [r a] 
     	    	a4.~ a4 g8 |fis\f [r a] a gis a |e [r a] a gis a 
@@ -36,7 +37,7 @@ OneBarRest = R2.^\markup{\normalsize\number 1}
     	        }
     	    \repeat volta 2 {
     	    	    b8\ff ais b g4 d'8 |b4. g |e a |g~ g4 g8 |a b c d4 c8
-    	    	    b4. bes |a g |f8 (g a d,4) d8 
+    	    	    b4. bes |a g |fis8 (g a d,4) d8 
     	    	    e\mf\< [r e] \acciaccatura fis8 e dis e |fis4. fis
     	    	    g4 g8 \acciaccatura b a g a |b4.~->\ff b4 b8 
     	    	    a [r g] e [r c'] |b4. g | a fis }
@@ -46,7 +47,8 @@ OneBarRest = R2.^\markup{\normalsize\number 1}
     	    	    }
     	    \repeat volta 2 {
     	    	   \key c \major
-    	    	   e4.\p\<^\markup {\bold {TRIO}} (f |fis g) 
+    	    	   \mark \markup {\bold {TRIO}}
+    	    	   e4.\p\< (f |fis g) 
     	    	   e'8\! [r e] e [r dis]
     	    	   e4.~ e4 g,8 |e4.\p\< (f |fis g) |f'8\! [r f] f [r e] 
     	    	   f4.~ f4 e8 |d4.\mf (cis |d4) g,8 (fis4 g8) |e'4.(dis 
@@ -65,7 +67,7 @@ OneBarRest = R2.^\markup{\normalsize\number 1}
     	   r4 r8 r4 fis8-> |g4-> d8-> g4-> r8 |fis2. |g |aes2. |g4 r8 f!4.->
     	   \repeat volta 2 {
     	   	   e4.\f\< f |fis g\! |e8-> [r e] e [r dis] |e4.~ e4 g8 
-    	   	   e4.\f\< f |fis g\! |f!8-> [r f] f [r e] |f4.~ f4 e8 |d4. cis 
+    	   	   e4.\< f |fis g\! |f!8-> [r f] f [r e] |f4.~ f4 e8 |d4. cis 
     	   	   d4 g8 (fis4 g8) |e4. dis |e4 g8 (fis4 g8) }
     	   \alternative {
     	   	   {b4.\< d |c4 (d8) a4 (c8) |b4\> (c8) a4 (b8) 

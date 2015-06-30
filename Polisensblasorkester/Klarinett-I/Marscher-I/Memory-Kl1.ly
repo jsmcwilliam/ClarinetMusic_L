@@ -4,9 +4,9 @@
 %					  header.
 %Comment out from here
 %{
-#(set-default-paper-size "a5" 'landscape)
+#(set-default-paper-size "a4" 'portrait)
 %#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 15) % set staff-size when ready to print
+#(set-global-staff-size 18) % set staff-size when ready to print
 
 \include "Marsch_format.ly"
 
@@ -63,7 +63,11 @@
 	\mark 29                
 	b4\<)_\markup {Legato} e b\> a\! |b4\< e b\> a\! 
 	b4 e e \times 2/3 {d4 c8} |d4 d~ \times 2/3 {d4 c8} 
-	\times 2/3 {d8 (e fis} |g4)  g g8-- b~ b a16 (g) |fis2 fis8-- a~ a g 
+	\times 2/3 {d8 (e fis} 
+	
+%Rehearsal mark 33
+	\mark 33
+	g4)  g g8-- b~ b a16 (g) |fis2 fis8-- a~ a g 
 	g2_\markup {\italic {cresc. poco a poco}} g4-- g-- 
 	fis2 r4 \times 2/3 {c8->\< d-> e->\!}
 	
@@ -72,7 +76,7 @@
 	\key f \major
 	f4->\f f~-> \times 2/3 {f8-> e-> f->} \times 2/3 {g8-> f-> d->}
 	f4-> f~-> \times 2/3 {f8-> e-> f->} \times 2/3 {g8-> f-> c->}
-	d4-> d~-> \times 2/3 {d8-> bes-> d->} \times 2/3 {d8-> c-> bes->}
+	d4-> d~-> \times 2/3 {d8-> bes-> d->} \times 2/3 {d8-> (c)-> bes->}
 	a2.-> \times 2/3 {a4 c8} c4-- \times 2/3 {g4 a8} bes-- c-- d-- e--
 	\times 2/3 {f8-> (e) d->} c2\> \times 2/3 {a4 f8\!} 
 	c'4--\mf c2_\markup {\italic {poco rit.}} \times 2/3 {d,4 f8}

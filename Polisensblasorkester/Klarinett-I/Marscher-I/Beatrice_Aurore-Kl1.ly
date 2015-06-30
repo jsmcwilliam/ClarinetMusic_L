@@ -4,8 +4,9 @@
 %					  header.
 %Comment out from here
 %{
-#(set-default-paper-size "a5" 'landscape)
-#(set-global-staff-size 15) % set staff-size when ready to print
+#(ly:set-option 'point-and-click #t)
+#(set-default-paper-size "a4" 'portrait)
+#(set-global-staff-size 18) % set staff-size when ready to print
 
 \include "Marsch_format.ly"
 
@@ -18,7 +19,7 @@
     	    \key bes \major \time 4/4 
     	    \compressFullBarRests
     	    \set Score.markFormatter = #format-mark-box-letters
-    	    \partial 4 d4\f^\markup {\bold {Modito}} ( |f4.) f8 f2~ 
+    	    \partial 4 d4\f^\markup {\bold {Moderato}} ( |f4.) f8 f2~ 
     	    f4 g (bes8 a g f |a4. f8) f2~ |f2. f4~
     	    f^\markup {\bold {T:o di Bossa Nova}} r r2 |r r4 d\mf (
     	    
@@ -32,7 +33,7 @@
 %Rehearsal mark B
 	    \mark \default   	    	    
     	    	    f4.) f8 f4 f |f (g bes g) |a4. (f8) f4 f |f2. f4 ( 
-    	    	    c' d e c |d bes c s) |bes-- (bes-- bes-- bes-- |bes2.) r4
+    	    	    c' d ees c |d bes c a) |bes-- (bes-- bes-- bes-- |bes2.) r4
     	    	    
 %Rehearsal mark C
 	    \mark \default
@@ -62,7 +63,7 @@
     }%end relative
     \header {
     	    piece = "Beatrice-Aurore"
-    	    composer = "Mj. Caesarman"
+    	    composer = "Nj. Casserman"
     	}
     	\layout {ragged-last = ##t
     	}

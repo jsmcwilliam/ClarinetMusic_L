@@ -103,7 +103,7 @@
     
     \repeat volta 2 { %startrep
     	    r4 r8 f'( \pp e f g f)      | % 69
-    	    f4 f ees bes    | % 70
+    	    f4 f d bes    | % 70
     	    r4 r8 f'( e f g f)      | % 71
     	    d4 f bes, f'      | % 72
     	    r r8 g,( bes ees g ees)      | % 73
@@ -119,7 +119,7 @@
     	    f-> ( e f g) f-> ( \< e f g)      | % 83
     	    f-> ( e f g) f-> ( e f g) \!      | % 84
     	    r4 r8 f'( \p e f g f)      | % 85
-    	    f4 f ees bes      | % 86
+    	    f4 f d bes      | % 86
     	    r r8 f'( e f g f)      | % 87
     	    d4 f bes, f'      | % 88
     	    r r8 g,( bes ees g ees)      | % 89

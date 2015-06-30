@@ -4,8 +4,9 @@
 %					  header.
 %Comment out from here
 %{
-#(set-default-paper-size "a5" 'landscape)
-#(set-global-staff-size 15) % set staff-size when ready to print
+#(ly:set-option 'point-and-click #t)
+#(set-default-paper-size "a4" 'portrait)
+#(set-global-staff-size 18) % set staff-size when ready to print
 
 OneBarRest = R2.^\markup{\normalsize\number 1}
 
@@ -20,14 +21,15 @@ OneBarRest = R2.^\markup{\normalsize\number 1}
     	    \key g \major \time 3/4 
     	    \compressFullBarRests
     	    \set Score.markFormatter = #format-mark-circle-numbers
-    	    \override DynamicLineSpanner #'staff-padding = #4
+    	    \override DynamicLineSpanner #'staff-padding = #2
     	    <<{\set fontSize = #-4  % make note heads smaller
     	       d'8_\markup {\concat { "1'a Fl" \char #246 "jt"}} _(e) g b d eis  
     	       \unset fontSize } % return to default size
     	    \\
     		{\override MultiMeasureRest.staff-position = #1 R2.
   		 \revert MultiMeasureRest.staff-position }>> 
- 	    e,,8\mf\< (a) c e g b | <a~ d,~>2.\> | <a d,>4. r8\! r4
+ 	    e,,8\mf\<^\markup {"a. 1"} (a) c-- e-- g-- b--
+ 	    <a~ d,~>2.\mf\> | <a d,>4. r8\! r4
  	    \bar "||" 
 		 
 %Rehearsal mark 1
@@ -69,7 +71,7 @@ OneBarRest = R2.^\markup{\normalsize\number 1}
 		
 %Rehearsal mark 5
 		\mark \default
-		d'4\mp d8 d b b |g4 (e8) b b b|c4 e8 (g) b (g) |a4. r8 r4
+		d'4 d8 d b b |g4 (e8) b b b|c4 e8 (g) b (g) |a4. r8 r4
 		r8 g\mf\< (b d dis4\> |e4.)\breathe b8\! b b 
 		c\p\< (e4) g8 (b)\> b32 (bes a aes\! |g4.)\fermata r8 r4 
 		\bar "||"

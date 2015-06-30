@@ -4,8 +4,9 @@
 %					  header.
 %Comment out from here
 %{
+#(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 15) % set staff-size when ready to print
+#(set-global-staff-size 18) % set staff-size when ready to print
 
 OneBR = R1^\markup{\normalsize\number 1}
 
@@ -44,8 +45,8 @@ OneBR = R1^\markup{\normalsize\number 1}
 
 	}	
 	\time 2/2 \key aes \major
-	 
-	\acciaccatura {ees,16 [f g]} aes4\f^\markup {\bold "Trio"} 
+	\mark \markup {\bold "Trio"}
+	\acciaccatura {ees,16 [f g]} aes4\f 
 	\times 2/3 {c8 (bes aes)} g2
 	\acciaccatura {ees16 [f g]} aes4 
 	\times 2/3 {c8 (bes aes)} g2 | \acciaccatura {ees16 [f g]} aes4 r4 r2
@@ -86,6 +87,7 @@ OneBR = R1^\markup{\normalsize\number 1}
 	{f2:8-. e4 r |des2:8-. c4 r 
 	f8 (des) des (f) f8 (des) des (f) |f4 r r2 }
 	>>
+	\pageBreak
 	ees8 (c) c (ees) ees8 (c) c (ees) |ees4 r r2 
 	r8 g, (aes bes c des ees f)
 	ees1\startTrillSpan 

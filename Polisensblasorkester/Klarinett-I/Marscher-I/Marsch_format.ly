@@ -4,22 +4,17 @@
 %Bring in the time/date package. Set format to month day, year. Set format for
 %headers: piece, meter and composer.
 
-today = #(strftime "%d-%m-%Y" (localtime (current-time)))
+date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 \paper {
     indent = 0.0\cm
     ragged-bottom = ##t
     tagline = \markup {
-        \line {
-            "Copied by John McWilliam,"
-            \concat { "(rev. " \today ")" }
-        }
-    }
+    	    \line {\concat {"Malm" \char#246 "Polisensbl" \char#229 "sorkester. Kopierad: John S. McWilliam, (rev. " \date ")" }}}
 	scoreTitleMarkup = \markup {
-		\fill-line {
-			\null
-			\fontsize #4 \bold \fromproperty #'header:piece
-			\fromproperty #'header:composer
+	    \fill-line {
+%	    \null
+	    \fontsize #4 \bold \fromproperty #'header:piece
+	    \fromproperty #'header:composer
 		}}
-        tocItemMarkup = \tocItemWithDotsMarkup
 }

@@ -4,8 +4,9 @@
 %					  header.
 %Comment out from here
 %{
-#(set-default-paper-size "a5" 'landscape)
-#(set-global-staff-size 15) % set staff-size when ready to print
+#(ly:set-option 'point-and-click #t)
+#(set-default-paper-size "a4" 'portrait)
+#(set-global-staff-size 18) % set staff-size when ready to print
 
 \include "Marsch_format.ly"
 
@@ -47,9 +48,10 @@
 	
 %Rehearsal mark C
 	\mark \default
-	d4-- d (b) |c-- c-- a8 (b) |c4-- c (a) |b2 g8 (a) |b4-- b (g)
+	d4-- d (b) |c-- c-- a8 (b) |c4-- c (a |b2) g8 (a) |b4-- b (g)
 	a-- a-- fis8 (g) |a4-- a (fis) |g2 r4 |R2.*8 |\bar "||" |R2.*3 
-	r8^\markup {Soli} d'8\mf\noBeam (e [fis]_\markup {Rit..} b [a])
+	r8\mf^\markup {Soli} d'8\noBeam \(e_\markup {Rit..} [fis] b\fermata 
+	([a])\)
 	
 	
 %Rehearsal mark D

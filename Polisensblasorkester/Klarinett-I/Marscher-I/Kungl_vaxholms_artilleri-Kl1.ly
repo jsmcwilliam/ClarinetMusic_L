@@ -5,9 +5,9 @@
 %Comment out from here
 %{
 #(ly:set-option 'point-and-click #t)
-#(set-default-paper-size "a5" 'landscape)
-%#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 15) % set staff-size when ready to print
+%#(set-default-paper-size "a5" 'landscape)
+#(set-default-paper-size "a4" 'portrait)
+#(set-global-staff-size 18) % set staff-size when ready to print
 #(allow-volta-hook "||")
 
 \include "Marsch_format.ly"
@@ -53,7 +53,7 @@
     	  }
 
     	  \repeat volta 2 {
-    	  d4\ff) r a-> c-> |bes-> r d,4. (a'8) |g1~ |g4 f8\mf (g a bes a cis 
+    	  d4\ff) r a-> c-> |bes-> r d,4. (a'8) |g1~ |g4 f8\mf (g a bes c cis 
     	  d2->)\< d |d d |\times 2/3 {d4\ff c b} c2~ |c4 r 
     	  << {bes2->~ |bes4 r a2->~ |a4. r8 g4. ( bes8) |a1~ |a4 r bes2->~ 
     	      bes4 r a2->~ |a4. }
@@ -83,7 +83,8 @@
 	  }
 
 	  \key ees \major \time 2/2
-	  ees4\f^\markup {TRIO} r ees r |ees r r2
+	  \mark \markup {TRIO}
+	  ees4\f r ees r |ees r r2
 	  
 	  \repeat volta 2 {
 	  	  bes4\mf r \times 2/3 {bes g bes} |bes r c r 

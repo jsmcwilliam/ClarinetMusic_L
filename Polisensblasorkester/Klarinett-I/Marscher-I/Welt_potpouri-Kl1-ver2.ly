@@ -4,35 +4,25 @@
 % 				       2. Create include file of relative and
 %					  header.
 %Comment out from here
-%
+%{
 #(ly:set-option 'point-and-click #t)
-#(set-default-paper-size "a4" 'landscape)
+#(set-default-paper-size "a4" 'portrait)
 #(set-global-staff-size 18) % set staff-size when ready to print
 
-\header {
-	title = \markup {\concat {"WELT-BESTSELLER-POTPOURRI F" \char#220 "R BLASMUSIK"}} 
-	subtitle = "1. Teil" 
-	arranger = "Arr. Willi Loffler" 
- 	instrument = "Klarinette in Bb" 
- 	tagline = "Kopierad av John McWilliam" 
+\include "Marsch_format.ly"
 
-}
+%... to here
+%}
+    \score {
 
-%\language "svenska"
-
-
-staffClarinetInBb = \new Staff {
-    \time 6/8
-%    \set Staff.instrumentName = "Clarinet in Bb"
-    \set Staff.midiInstrument = "clarinet"
-%    \transposition b,
-    \key c \major
-    \clef treble
-    \set Score.markFormatter = #format-mark-circle-numbers
-    \relative c'' {     
+    	    % Svenska Polisens Marschbok
+    \relative c'' {
+    	    \time 6/8 \key c \major \clef treble
+    	    \set Score.markFormatter = #format-mark-circle-numbers    	    
     	    g'8->\f^\markup {\bold {Marcia}} r r r4 r8 |a-> r r r4 r8 
     	    c-> r r c4.\trill |b8 r r e,4.  
     	    \bar "||"
+    	    
 %Rehearsal Mark 1.
 	    \mark \default
     	    g2.^\markup {Hello Dolly}
@@ -89,7 +79,9 @@ staffClarinetInBb = \new Staff {
 	    	    } 
 	   r4 bes bes |bes (c bes) |g g g |g (aes g) |bes bes bes |bes (c bes) 
 	   r8 bes (d4) d
-	   r8 g, (c4) c |r4 c c |c (d c) |a a a |a (bes a) |c\< c c |c d c 
+	   r8 g, (c4) c |r4 c c |c (d c)
+	   \pageBreak
+	   a a a |a (bes a) |c\< c c |c d c 
 	   r8 b (e4) e |r8 c (e4) e |a,->\f r a |a a a |a a a |a2 (f4) 
 	   g g g |g g g |g a g |e2. |f4 f f |f g a |bes bes bes |bes c d 
 	   \repeat unfold 6 {e-> (f) f} |f2.~ |f4 r r
@@ -130,25 +122,17 @@ staffClarinetInBb = \new Staff {
 	   b2 (c4) g |c2. (d4) |ees2. (c4) |d (c bes g |f) d, (f d') |c1 ( |d) 
 	   r4 bes'4\< (d2) |ees2 \tuplet 3/2 {ees4 bes ees} |d1~->\ff |d4 r r2
 	   \bar "|."
-    }
+    } %end relative
 
+\header {
+	piece = \markup {\concat {"Welt-Potpourri f" \char#252 
+	"r Blasmusik"}} 
+	composer = "Willi Loffler" 
 }
 
-
-\score {
-	<<
-		\staffClarinetInBb
-	>>
-	
-	\midi {
-	}
-
-  \layout {#(set-default-paper-size "a4")
+  \layout {
   	  ragged-last = ##t
   }
-}
-
-\paper {
-}
+} %end score
 
 

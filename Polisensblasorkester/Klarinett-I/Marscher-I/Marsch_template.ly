@@ -6,14 +6,14 @@
 %Comment out from here
 %
 #(ly:set-option 'point-and-click #t)
-#(set-default-paper-size "a5" 'landscape)
-%#(set-default-paper-size "a4" 'portrait)
+%#(set-default-paper-size "a5" 'landscape)
+#(set-default-paper-size "a4" 'portrait)
 #(set-global-staff-size 15) % set staff-size when ready to print
 
 \include "Marsch_format.ly"
 
 %...to here
-%
+%}
   \score {
 
     % Svenska Polisens Marscher: 1. Title    
@@ -33,3 +33,7 @@
     	}
     	
   }%end score
+
+% a \char#229 A \char#197       o
+% a \char#228    A \char#196 	e
+% o \char#246 O \char#214	oe

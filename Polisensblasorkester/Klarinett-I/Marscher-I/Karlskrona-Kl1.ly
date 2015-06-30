@@ -5,8 +5,9 @@
 %					  header.
 %Comment out from here
 %{
-#(set-default-paper-size "a5" 'landscape)
-#(set-global-staff-size 14) % set staff-size when ready to print
+#(ly:set-option 'point-and-click #t)
+#(set-default-paper-size "a4" 'portrait)
+#(set-global-staff-size 18) % set staff-size when ready to print
 
 OneBR = R1^\markup{\normalsize\number 1}
 
@@ -48,10 +49,11 @@ OneBR = R1^\markup{\normalsize\number 1}
     	        	{c4 g8\ff g g4 g}
     	        	{c4\repeatTie r4 \grace {g16 (a b)} c4 r }
     	        }
-    	  \key f \major 
+    	  \key f \major
+    	  \mark \markup {\bold "TRIO"}
     	  \repeat volta 2 {
     	  	  \OneBR
-    	  	  r4 f,8\p^\markup {\bold "TRIO"} (g) a4 bes
+    	  	  r4 f,8\p (g) a4 bes
     	  	  c8 (bes) a-. g-. a4 r |f8 (e) d e f4 r
     	  	  r \acciaccatura e8 f4 f f |r \acciaccatura gis8 a4 a a
     	  	  r c,8 (d) e4 f |g8 (f) e d e4 r

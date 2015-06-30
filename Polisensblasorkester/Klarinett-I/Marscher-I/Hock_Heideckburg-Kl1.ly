@@ -1,11 +1,11 @@
 \version "2.18.2"
 % When ready to include in collection: 1. Comment paper.
 % 				       2. Create include file of relative and
-%{					  header.
+%					  header.
 %Comment out from here
-%
+%{
 #(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 15) % set staff-size when ready to print
+#(set-global-staff-size 18) % set staff-size when ready to print
 
 \include "Marsch_format.ly"
 
@@ -96,7 +96,8 @@
     } % end alternatives
     
     \time 2/2 \key bes \major
-    \grace{\stemUp f16^\markup {\upright  "TRIO"} [( g a ) ]  } 
+    \mark \markup {\bold  "TRIO"}
+    \grace{\stemUp f16 [( g a ) ]  } 
     \stemNeutral bes4_\markup{\dynamic ffz} r4 r2      | % 67
     R1^\markup{\normalsize\number 1}	 | % 68
     
@@ -165,6 +166,7 @@
     bes bes bes bes      | % 120
     c1~      | % 121
     c4 r r2      | % 122
+    \pageBreak
     \set countPercentRepeats = ##t
     \repeat percent 9
     {\times 2/3{c4\ff  c c  } \times 2/3{c c c  }} % 129
