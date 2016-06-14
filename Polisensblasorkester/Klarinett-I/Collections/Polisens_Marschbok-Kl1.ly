@@ -18,13 +18,14 @@ logo = \markup {\epsfile #X #30 #"Polisens_logo.eps" }
 \book {
   
   \header { 
-  	  title = \markup {\concat {"Malm" \char#246 "Polisens Bl" \char#229 "sorkester"}}
-  	  subtitle = "Svartaboken"
+%  	  title = \markup {\concat {"Malm" \char#246 "Polisens Bl" \char#229 "sorkester"}}
+ 	  title = \markup {\concat {"Polisens Musikk" \char#229 "r Region Syd"}}
+	  subtitle = "Svartaboken"
 	  subsubtitle = "Klarinett I i Bb"
           picture = \logo
           copyright = \markup {
     	    \line {\concat {"Malm" \char#246 "polisens Bl" \char#229 "sorkester. Kopierad: John S. McWilliam, (rev. " \date ")" }}}
-%   	  tagline = "Copied by John S. McWilliam"
+%   	  tagline = "John S. McWilliam, 2016"
 
   }
 
@@ -51,7 +52,7 @@ logo = \markup {\epsfile #X #30 #"Polisens_logo.eps" }
     	}}
     	evenFooterMarkup = \oddFooterMarkup
 }
-  
+ 
 \pageBreak %after title page
 \markuplist \table-of-contents
 \pageBreak
@@ -74,7 +75,7 @@ logo = \markup {\epsfile #X #30 #"Polisens_logo.eps" }
 	\include "../Ceremonimusik/Den_blomstertid_nu_kommer-Kl1_ver2.ly" 	  
 \pageBreak
    } %end bookpart
-   
+  
    \bookpart {
 	\header {
 		title = "Marschmusiken"
@@ -91,59 +92,63 @@ logo = \markup {\epsfile #X #30 #"Polisens_logo.eps" }
 	\include "../Marschmusik/Fanvakten-Kl1.ly"
 \pageBreak
 
-	\tocItem \markup {"3. Hock Heideckburg"}
+	\tocItem \markup {"3. Florentiner Marsch"}
+	\include "../Marschmusik/Florentiner_Marsch-Kl1.ly"
+\pageBreak
+
+	\tocItem \markup {"4. Hock Heideckburg"}
 	\include "../Marschmusik/Hock_Heideckburg-Kl1.ly"
 \pageBreak
 
-	\tocItem \markup {"4. Karlskrona (Chefsmarsch)"}
+	\tocItem \markup {"5. Karlskrona (Chefsmarsch)"}
 	\include "../Marschmusik/Karlskrona-Kl1.ly"
 \pageBreak
  
-	\tocItem \markup {"5. Kong Fredrick (Honnormarch)"}
+	\tocItem \markup {"6. Kong Fredrick (Honnormarch)"}
 	\include "../Marschmusik/Kong_Fredrick_Honnormarch-Kl1.ly"
 \pageBreak
 
-	\tocItem \markup {"6. Kungl. Vaxholms Kustartilleriregementets marsch"}
+	\tocItem \markup {"7. Kungl. Vaxholms Kustartilleriregementets marsch"}
 	\include "../Marschmusik/Kungl_vaxholms_artilleri-Kl1.ly"	 
 \pageBreak
 		
-	\tocItem \markup {"7. Liberty Bell"}
+	\tocItem \markup {"8. Liberty Bell"}
 	\include "../Marschmusik/Liberty_Bell-Kl1.ly"
 \pageBreak
 
-	\tocItem \markup {"8. National Emblem"}
+	\tocItem \markup {"9. National Emblem"}
 	 \include "../Marschmusik/National_emblem-Kl1.ly"
 \pageBreak
 
-	 \tocItem \markup {"9. On the Square"}
+	 \tocItem \markup {"10. On the Square"}
 	 \include "../Marschmusik/On_the_square-Kl1.ly"
 \pageBreak
 	
-	 \tocItem \markup {"10. Our Director"}
+	 \tocItem \markup {"11. Our Director"}
 	 \include "../Marschmusik/Our_director-Kl1.ly"
 \pageBreak
 
-	 \tocItem \markup {\concat {"11. P" \char #229 " Vakt"}}
+	 \tocItem \markup {\concat {"12. P" \char #229 " Vakt"}}
 	 \include "../Marschmusik/Pa_vakt-Kl1.ly"
 \pageBreak
  
-	 \tocItem \markup {12. Svensk Polismarsch}
+	 \tocItem \markup {13. Svensk Polismarsch}
 	 \include "../Marschmusik/Svensk_Polismarsch-Kl1.ly"
 \pageBreak
    	  
-	 \tocItem \markup {"13. Svenska Fygarmarsch"}
+	 \tocItem \markup {"14. Svenska Fygarmarsch"}
 	 \include "../Marschmusik/Svenska_Flygarmarschen-Kl1.ly"
 \pageBreak
 		
-	 \tocItem \markup {\concat {"14. Under den bl" \char #229 " gula fanan"}}
+	 \tocItem \markup {\concat {"15. Under den bl" \char #229 " gula fanan"}}
 	 \include "../Marschmusik/Under_den_bla_gula_fanan-Kl1.ly"
 \pageBreak
 
-	 \tocItem \markup {"15. Vanished Army"}
+	 \tocItem \markup {"16. Vanished Army"}
 	 \include "../Marschmusik/Vanished_army-Kl1.ly"	
 \pageBreak
 	 
-	 \tocItem \markup {\concat {"16. " \char #214 "verste Tillman"}}
+	 \tocItem \markup {\concat {"17. " \char #214 "verste Tillman"}}
 	 \include "../Marschmusik/Overste_Tillman-Kl1.ly"
 \pageBreak
  } %end bookpart		
@@ -257,6 +262,7 @@ logo = \markup {\epsfile #X #30 #"Polisens_logo.eps" }
 	\tocItem \markup {\concat {"25. Visa vid vindens "\char #228 "ngar"}}
 	\include "../Underhallningsmusik/Visa_vid_vindens_angar-Kl1.ly"
    } % end bookpart
-%}				
+%}
+
 }%end book
 

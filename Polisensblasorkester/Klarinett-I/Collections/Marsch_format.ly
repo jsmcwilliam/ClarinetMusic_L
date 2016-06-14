@@ -10,8 +10,10 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
     indent = 0.0\cm
     ragged-bottom = ##t
     tagline = \markup {
-    	    \line {\concat {"Malm" \char#246 "Polisensbl" \char#229 "sorkester. Kopierad: John S. McWilliam, (rev. " \date ")" }}}
-	scoreTitleMarkup = \markup {
+%    	    \line {\concat {"Malm" \char#246 "Polisensbl" \char#229 "sorkester. Kopierad: John S. McWilliam, (rev. " \date ")" }}}
+    	    \line {\concat {"PMKRS: Kopierad: John S. McWilliam, (rev. " \date ")" }}}
+
+scoreTitleMarkup = \markup {
 	    \fill-line {
 %	    \null
 	    \fontsize #4 \bold \fromproperty #'header:piece
