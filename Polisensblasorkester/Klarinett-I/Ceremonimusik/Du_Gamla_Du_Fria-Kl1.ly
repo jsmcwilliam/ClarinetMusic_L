@@ -1,16 +1,15 @@
 \version "2.18.0"
-% When ready to include in collection: 1. Comment out paper.
-% 				       2. Create include file of score and
+% When ready to include in collection: 1. Comment out paper, score.
+% 				       2. Create include file of relative and
 %					  header.
-%
-%comment out from here
+%Comment out from here
 %{
+#(ly:set-option 'relative-includes #t) 
 #(set-default-paper-size "a5" 'landscape)
-#(set-global-staff-size 18) % set staff-size when ready to print
 
-\include "Marsch_format.ly"
-  
-%to here
+\include "../../../Includes/Polis_format.ily"
+
+%...to here
 %}
   \score {
     % Svenska Polisens Marscher: 1. Du Gamla Du Fria    

@@ -1,14 +1,9 @@
 \version "2.18.0"
-% When ready to include in collection: 1. Comment out paper.
-% 				       2. Create include file of relative and
-%					  header.
+% When ready to include in collection:	1. Comment out top section with \Include file(s)
+%					2. \midi section if present.
 %Comment out from here
 %{
-#(set-default-paper-size "a4" 'portrait)
-%#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 18) % set staff-size when ready to print
-
-\include "Marsch_format.ly"
+\include "../../../Includes/Polis_format.ily"
 
 %...to here
 %}
@@ -69,7 +64,7 @@
 	\mark 33
 	g4)  g g8-- b~ b a16 (g) |fis2 fis8-- a~ a g 
 	g2_\markup {\italic {cresc. poco a poco}} g4-- g-- 
-	fis2 r4 \times 2/3 {c8->\< d-> e->\!}
+	fis2 r4 \times 2/3 {c8->\< d-> e->\!} \bar "||"
 	
 %Rehearsal mark 37
 	\mark 37                
@@ -92,7 +87,5 @@
     \header {
     	    piece = "Memory"
     	    composer = "Andrew Lloyd Webber"
-    	}
-    	\layout {ragged-last = ##t
     	}
   }%end score

@@ -1,16 +1,9 @@
 \version "2.18.0"
-% When ready to include in collection: 1. Comment out paper.
-% 				       2. Create include file of relative and
-%					  header.
-%Comment out from here"
+% When ready to include in collection:	1. Comment out top section with \Include file(s)
+%					2. \midi section if present.
+%Comment out from here
 %{
-#(ly:set-option 'point-and-click #t)
-#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 18) % set staff-size when ready to print
-
-ignore = \override NoteColumn #'ignore-collision = ##t
-
-\include "Marsch_format.ly"
+\include "../../../Includes/Polis_format.ily"
 
 %...to here
 %}
@@ -78,7 +71,5 @@ ignore = \override NoteColumn #'ignore-collision = ##t
     \header {
     	    piece = "On the street where you live (My Fair Lady)"
     	    composer = "Frederick Loewe"
-    	}
-    	\layout {ragged-last = ##t
     	}
   }%end score

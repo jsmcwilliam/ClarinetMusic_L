@@ -1,14 +1,9 @@
 \version "2.18.0"
-% When ready to include in collection: 1. Comment out paper.
-% 				       2. Create include file of relative and
-%					  header.
+% When ready to include in collection:	1. Comment out top section with \Include file(s)
+%					2. \midi section if present.
 %Comment out from here
 %{
-#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 18) % set staff-size when ready to print
-#(allow-volta-hook "||")
-
-\include "Marsch_format.ly"
+\include "../../../Includes/Polis_format.ily"
 
 %...to here
 %}

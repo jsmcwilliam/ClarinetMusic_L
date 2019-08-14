@@ -1,15 +1,9 @@
 \version "2.18.0"
-% When ready to include in collection: 1. Comment out version, paper, score 
-%					  and book.
-% 				       2. Create include file of relative and
-%					  header.
+% When ready to include in collection:	1. Comment out top section with \Include file(s)
+%					2. \midi section if present.
 %Comment out from here
 %{
-#(ly:set-option 'point-and-click #t)
-#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 18) % set staff-size when ready to print
-
-\include "Marsch_format.ly"
+\include "../../../Includes/Polis_format.ily"
 
 %...to here
 %}
@@ -80,7 +74,7 @@
     bes!2 e,       |
     f4 g8 (a bes c d e             |
     f4) r r2 \bar "||"             |
-\pageBreak   
+   
     d'2->  \ff cis->               |d4  (c!8 bes a4) r8 d16 (e)                |
     d4 cis a d     |cis cis8 cis cis4 r            |f2->  e-> |c4 bes aes r    |
     f' e c f       |e e8 e e4 r    |
@@ -103,7 +97,5 @@
     	    piece = \markup {\concat 
     	    {"Kong Fredrick den 9'e Honn" \char #246 "rmarch"}}
     	    composer = "Kai Neilsen"
-    	}
-    	\layout {ragged-last = ##t
     	}
   }%end score

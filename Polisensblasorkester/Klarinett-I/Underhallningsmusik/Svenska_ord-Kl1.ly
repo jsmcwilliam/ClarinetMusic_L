@@ -1,16 +1,9 @@
 \version "2.18.0"
-% When ready to include in collection: 1. Comment out top section.
-% 				       2. Create include file of relative and
-%					  header.
-%#(allow-volta-hook "||")
+% When ready to include in collection:	1. Comment out top section with \Include file(s)
+%					2. \midi section if present.
 %Comment out from here
 %{
-#(ly:set-option 'point-and-click #t)
-%#(set-default-paper-size "a5" 'landscape)
-#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 18) % set staff-size when ready to print
-
-\include "Marsch_format.ly"
+\include "../../../Includes/Polis_format.ily"
 
 %...to here
 %}
@@ -148,7 +141,6 @@
   }
   
   g8 r8 r4 r2 \bar "||" 
-\pageBreak
   r8. \p ais'16 ( [ b8. ais16 ] b4. ais8 | % 61
   b4 ) -. r4 r2 | % 62
   r8. b16 ( [ c8. b16 ] c4. b8 | % 63
@@ -183,7 +175,4 @@
     	}
     	
   }%end score
-
-% a \char#229 A \char#197       o
-% a \char#228    A \char#196 	e
-% o \char#246 O \char#214	oe
+  

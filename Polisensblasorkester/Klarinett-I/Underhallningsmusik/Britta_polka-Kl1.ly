@@ -1,16 +1,9 @@
 \version "2.18.0"
-% When ready to include in collection: 1. Comment out paper.
-% 				       2. Create include file of relative and
-%					  header.
-#(allow-volta-hook "||")
+% When ready to include in collection:	1. Comment out top section with \Include file(s)
+%					2. \midi section if present.
 %Comment out from here
 %{
-#(ly:set-option 'point-and-click #t)
-%#(set-default-paper-size "a5" 'landscape)
-#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 18) % set staff-size when ready to print
-
-\include "Marsch_format.ly"
+\include "../../../Includes/Polis_format.ily"
 
 %...to here
 %}
@@ -47,9 +40,9 @@
     	    
     	    c8\ff c c c |c \acciaccatura c8 b16 ais b8 g |f' f f f 
     	    f \acciaccatura f8 e16 dis e8 c |g' g g g |g f16 e d8 c16 a
-    	    g8 c16 d e8 d16 e |d4 (c8) r \bar "||"
+    	    g8 c16 d e8 d16 e |d4 (c8) r \bar "||" \break
     	    
-    	    \key f \major \time 2/4 
+    	    \key f \major \time 2/4  
     	    \mark \markup { \musicglyph #"scripts.segno" }
     	    a2~\p^\markup {TRIO} |a8 r r4 |bes2 ( |a8) c-. a-. c-. |c'4 (g)
     	    a8 f a f |a4 g8. f16 |e8 d c bes |a2~ |a8 r r4 |bes2 ( 
@@ -89,17 +82,10 @@
 	d'4 (c8) r |c8->\p e16-. f-. g8-._\markup {dolce} g16-. a-. |g4-> (f8) r
 	b,-. d16-. e-. f8-. f16-. g-. |f4-> (e8) r |c'\ff c16 b a g f e
 	d8 c-> b-> a-> |g8 a'16 (g) e (g) c, (e) |g,8 b'16 b b8 b |c r c-> r 
-	c,2\fermata
-	%{	\repeat unfold 3 
-          s4 s4 s4
-          \bar "" 
-        %}
-	\bar"|." \break	    
+	c,2\fermata\bar"|." %\break	    
     }%end relative
     \header {
     	    piece = "Britta-polka"
     	    composer = "H.C.Lumbye"
-    	}
-    	\layout {ragged-last = ##t
     	}
   }%end score

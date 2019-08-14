@@ -1,21 +1,12 @@
 \version "2.18.0"
-% When ready to include in collection: 1. Comment out paper.
-% 				       2. Create include file of relative and
-%{					  header.
-#(allow-volta-hook "||")
+% When ready to include in collection:	1. Comment out top section with \Include file(s)
+%					2. \midi section if present.
 %Comment out from here
-%
-#(set-default-paper-size "a4" 'portrait)
-%#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 18) % set staff-size when ready to print
-
-OneBR = R1^\markup{\normalsize\number 1}
-
-\include "Marsch_format.ly"
+%{
+\include "../../../Includes/Polis_format.ily"
 
 %...to here
 %}
-
   \score {
 
     % Svenska Polisens Marscher: 1. Title    
@@ -87,7 +78,5 @@ OneBR = R1^\markup{\normalsize\number 1}
     \header {
     	    piece = "Puttin' on the Ritz"
     	    composer = "Irving Berlin"
-    	}
-    	\layout {ragged-last = ##t
     	}
   }%end score

@@ -1,16 +1,9 @@
 \version "2.18.0"
-% When ready to include in collection: 1. Comment out paper.
-% 				       2. Create include file of relative and
-%					  header.
+% When ready to include in collection:	1. Comment out top section with \Include file(s)
+%					2. \midi section if present.
 %Comment out from here
 %{
-#(ly:set-option 'point-and-click #t)
-%#(set-default-paper-size "a5" 'landscape)
-#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 18) % set staff-size when ready to print
-#(allow-volta-hook "||")
-
-\include "Marsch_format.ly"
+\include "../../../Includes/Polis_format.ily"
 
 %...to here
 %}
@@ -21,6 +14,7 @@
     	    \key bes \major \time 2/2 
     	    \compressFullBarRests
     	    \set Score.markFormatter = #format-mark-box-letters
+    	    \override TupletBracket.direction = #UP
     	    R1*4
     	    <c'-> f,>4\ff f,8 f f4 <d'-> f,> |<c-> f,>4 f,8 f f4 <d'-> f,> 
     	    <c-> f,> f,8 f f4 f
@@ -87,7 +81,7 @@
 	  ees4\f r ees r |ees r r2
 	  
 	  \repeat volta 2 {
-	  	  bes4\mf r \times 2/3 {bes g bes} |bes r c r 
+	  	  bes4\mf r \tuplet 3/2 {bes g bes} |bes r c r 
 	  	  bes r \times 2/3 {bes g bes} |\times 2/3 {ees bes ees} ees r
 	  	  bes4 r \times 2/3 {bes g bes} |bes r bes r 
 	  	  bes4 r \times 2/3 {bes g bes} |\times 2/3 {ees bes ees} f2->
@@ -108,7 +102,5 @@
     \header {
     	    piece = "Kungl. Vaxholms Kustartilleriregementets Marsch"
     	    composer = "Sam Rydberg"
-    	}
-    	\layout {ragged-last = ##t
     	}
   }%end score

@@ -1,16 +1,9 @@
 \version "2.18.0"
-% When ready to include in collection: 1. Comment out paper.
-% 				       2. Create include file of relative and
-%					  header.
+% When ready to include in collection:	1. Comment out top section with \Include file(s)
+%					2. \midi section if present.
 %Comment out from here
 %{
-#(ly:set-option 'point-and-click #t)
-#(set-default-paper-size "a4" 'Portrait)
-#(set-global-staff-size 18) % set staff-size when ready to print
-
-OneBR = R1^\markup{\normalsize\number 1}
-
-\include "Marsch_format.ly"
+\include "../../../Includes/Polis_format.ily"
 
 %...to here
 %}
@@ -76,7 +69,6 @@ OneBR = R1^\markup{\normalsize\number 1}
     bes1(         |a4) f a c             |des1(        |c4) e, f g \mf   |
     a gis8 _\markup{"cresc."} a bes4 a8 bes            | c4 b8 c d4 c8 d |
     ees4 d c bes \bar "||" |
-\pageBreak
     a4 r d4. \ff cis8    |d2 bes         |a d          |g,1~   |g4 a,( bes c  |
     d) f( e f)    |a2 g  |g a,~          |a4 r ees''4. d8      |ees2 c   |
     bes ees       |a,1~  |a4 b,( c d     |ees) g( fis g)       |bes2 a   |
@@ -90,7 +82,5 @@ OneBR = R1^\markup{\normalsize\number 1}
     \header {
     	    piece = "Svenska Flygarmarsch"
     	    composer = "Helge Damberg"
-    	}
-    	\layout {ragged-last = ##t
     	}
   }%end score

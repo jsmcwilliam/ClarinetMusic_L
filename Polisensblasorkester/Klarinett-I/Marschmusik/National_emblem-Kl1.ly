@@ -1,14 +1,9 @@
 \version "2.18.0"
-% When ready to include in collection: 1. Comment out paper.
-% 				       2. Create include file of relative and
-%					  header.
+% When ready to include in collection:	1. Comment out top section with \Include file(s)
+%					2. \midi section if present.
 %Comment out from here
 %{
-#(ly:set-option 'point-and-click #t)
-#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 18) % set staff-size when ready to print
-
-\include "Marsch_format.ly"
+\include "../../../Includes/Polis_format.ily"
 
 %...to here
 %}
@@ -20,6 +15,7 @@
     	    \compressFullBarRests
     	    \set Score.markFormatter = #format-mark-box-letters
     	    \set countPercentRepeats = ##t
+    	    \override TupletBracket.direction = #UP
     	    
     	    \appoggiatura { c'16[ d e] } f4->\ff r f,2~-> |f8 g a bes c4 cis->
     	    d-> r d,2~-> |d8 e f g a4 d-> |c,4. (b16 c) d4.-> (cis16 d) 
@@ -72,7 +68,5 @@
     \header {
     	    piece = "National Emblem"
     	    composer = "E. E. Bagley"
-    	}
-    	\layout {ragged-last = ##t
     	}
   }%end score

@@ -1,17 +1,9 @@
 \version "2.18.0"
-% When ready to include in collection: 1. Comment out version, paper, score 
-%					  and book.
-% 				       2. Create include file of relative and
-%					  header.
+% When ready to include in collection:	1. Comment out top section with \Include file(s)
+%					2. \midi section if present.
 %Comment out from here
 %{
-#(ly:set-option 'point-and-click #t)
-#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 18) % set staff-size when ready to print
-
-OneBR = R1^\markup{\normalsize\number 1}
-
-\include "Marsch_format.ly"
+\include "../../../Includes/Polis_format.ily"
 
 %...to here
 %}
@@ -83,9 +75,4 @@ OneBR = R1^\markup{\normalsize\number 1}
     	    piece = "Karlskrona (Chefsmarsch)"
     	    composer = "V. Widqvist"
     	}
-	\layout {
-		indent = #0
-%  		line-width = #150
-%  		ragged-last = ##t
-  		}
   }%end score

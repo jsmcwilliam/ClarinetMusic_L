@@ -1,13 +1,9 @@
 \version "2.18.2"
-% When ready to include in collection: 1. Comment paper.
-% 				       2. Create include file of relative and
-%					  header.
+% When ready to include in collection:	1. Comment out top section with \Include file(s)
+%					2. \midi section if present.
 %Comment out from here
 %{
-#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 18) % set staff-size when ready to print
-
-\include "Marsch_format.ly"
+\include "../../../Includes/Polis_format.ily"
 
 %...to here
 %}
@@ -166,7 +162,6 @@
     bes bes bes bes      | % 120
     c1~      | % 121
     c4 r r2      | % 122
-    \pageBreak
     \set countPercentRepeats = ##t
     \repeat percent 9
     {\times 2/3{c4\ff  c c  } \times 2/3{c c c  }} % 129
@@ -210,7 +205,5 @@
     \header {
     	    piece = "Hock Heideckburg"
     	    composer = "R. Herzer Op10"
-    	}
-    	\layout {ragged-last = ##t
     	}
   }%end score

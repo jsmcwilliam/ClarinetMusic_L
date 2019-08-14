@@ -1,23 +1,18 @@
-% Created on Sun Jun 24 11:43:01 CEST 2012
 \version "2.18.0"
-% When ready to include in collection: 1. Comment out paper.
-% 				       2. Create include file of relative and
-%					  header.
+% When ready to include in collection:	1. Comment out top section with \Include file(s)
+%					2. \midi section if present.
 %Comment out from here
 %{
-#(ly:set-option 'point-and-click #t)
-#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 18) % set staff-size when ready to print
+\include "../../../Includes/Polis_format.ily"
 
-\include "Marsch_format.ly"
-
-%... to here
+%...to here
 %}
     \score {
 
     	    % Svenska Polisens Marschbok
     \relative c'' {
     	    \time 6/8 \key c \major \clef treble
+    	    \override TupletBracket.direction = #UP
     	    \set Score.markFormatter = #format-mark-circle-numbers    	    
     	    g'8->\f^\markup {\bold {Marcia}} r r r4 r8 |a-> r r r4 r8 
     	    c-> r r c4.\trill |b8 r r e,4.  
@@ -80,7 +75,6 @@
 	   r4 bes bes |bes (c bes) |g g g |g (aes g) |bes bes bes |bes (c bes) 
 	   r8 bes (d4) d
 	   r8 g, (c4) c |r4 c c |c (d c)
-	   \pageBreak
 	   a a a |a (bes a) |c\< c c |c d c 
 	   r8 b (e4) e |r8 c (e4) e |a,->\f r a |a a a |a a a |a2 (f4) 
 	   g g g |g g g |g a g |e2. |f4 f f |f g a |bes bes bes |bes c d 
@@ -106,7 +100,7 @@
 	   c2.~ c8 r |bes'2 bes |bes4 (d2) bes4 |a4. (gis8) a4. (gis8) 
 	   a4 (bes a a) |g4 (a2 bes4) |a2 g 
 	   \bar "||"
-	   
+\pageBreak	   
 	   \time 2/2
 	   r4^\markup {\bold {Foxtrott (Mod. Swing}} f \tuplet 3/2 {g bes g} 
 	   a r r2 \bar "||"
@@ -129,10 +123,7 @@
 	"r Blasmusik"}} 
 	composer = "Willi Loffler" 
 }
-
-  \layout {
-  	  ragged-last = ##t
-  }
+ 
 } %end score
 
 

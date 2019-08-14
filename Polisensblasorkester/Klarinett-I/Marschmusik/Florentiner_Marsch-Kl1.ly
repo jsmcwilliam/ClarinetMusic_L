@@ -1,16 +1,9 @@
 \version "2.18.0"
-% When ready to include in collection: 1. Comment out top section.
-% 				       2. Create include file of relative and
-%					  header.
-%#(allow-volta-hook "||")
+% When ready to include in collection: 1. Comment out top section with \Include file(s)
+%                                      2. \midi section if present
 %Comment out from here
 %{
-#(ly:set-option 'point-and-click #t)
-%#(set-default-paper-size "a5" 'landscape)
-#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 15) % set staff-size when ready to print
-
-\include "Marsch_format.ly"
+\include "../../../Includes/Polis_format.ily"
 
 %...to here
 %}
@@ -82,16 +75,17 @@
     c'16-.\ff c-. c-. c-. \repeat unfold 4 {c-.} | c8 [bes a c] | bes [a g d] |
     g4 f16 (e g f) | \repeat unfold 3 {c'16-.} r \repeat unfold 3 {d16-.} r |
     c16-.\< \repeat unfold 2 {c-.} r \repeat unfold 3 {a-.} r |
-    \repeat unfold 7 {c-.} c-.\! | a8-.\ff a16-. a16-. a8-. r \bar "||"
+    \repeat unfold 7 {c-.} c-.\! | a8-.\ff a16-. a16-. a8-. r \bar "||" 
     
     \time 2/4 \key bes \major 
     \mark \markup {\bold  "TRIO"}
     d,,8\f [r16 d] d8 ees-^ | d-^ [r16 d] d8 bes-^ | d8-^ [r16 d] d8 g-^ |
     f4.-^ bes'8\p | f8. g16 f8 ees | d8. ees16 f8 d | bes d f, c' | 
-    bes^\markup {meno mosso} r r4 | R2*2 \bar "||"
+    bes^\markup {meno mosso} r r4 | R2*2 \pageBreak
     
     \repeat volta 2 {
-    	\acciaccatura f8 d'2\pp^\markup {con eleganza} ( | c4 bes) | bes2~ | 
+    \bar ".|:"
+    \acciaccatura f8 d'2\pp^\markup {con eleganza} ( | c4 bes) | bes2~ | 
     	bes4\< a | c2\> ( | bes4 g\!) | g2~ | g4 f | e2\< ( | a4\> g\!) | g2 ( | 
     	c,4) ees!8\< (f | g2\! | f4) ees8\> (d | f2~\! | f4) f | d'2 ( | 
     	c4 bes) | bes2~ | bes4 a | c2 ( | bes4 g) | g2~ | g4 f | bes2 ( | 
@@ -130,7 +124,7 @@
 		f'2~\startTrillSpan\< | f2\stopTrillSpan\!^\markup {Rit...} \bar "||"|
 
 		d'2->\fff_\markup {con entusiasmo} | c4-> bes-> | bes2->~ |bes4 a-> |
-		c2-> | bes4-> g-> | g2->~ | g4 f-> | e2 ( | a4) g | g2 ( | f4) ees8 (f)|
+		c2-> | bes4-> g-> | g2->~ | g4 c,-> | e2 ( | a4) g | g2 ( | c,4) ees8 (f)|
 		g2 ( | f4) ees8 (d) | f2~ | f4 f | d'2->| c4-> bes-> | bes2->~ |
 		bes4 a-> | c2-> | bes4-> g-> | g2->~ | g4 f-> | bes2 ( | e,4) g8 (bes) |
 		d2 ( | bes4) d,8 (ees) | f4\< ges~ | ges f\! | bes2~\< |
@@ -142,8 +136,6 @@
     	    piece = "Florentiner Marsch
     	    "
     	    composer = "J. Fucik, Op. 214"
-    	}
-    \layout {ragged-last = ##t
     	}
     	
 %    \midi {}

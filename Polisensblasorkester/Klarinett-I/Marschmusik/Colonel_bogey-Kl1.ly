@@ -1,18 +1,13 @@
 \version "2.18.0"
-% When ready to include in collection: 1. Comment out top section.
-% 				       2. Create include file of relative and
-%					  header.
+% When ready to include in collection:	1. Comment out top section with \Include file(s)
+%					2. \midi section if present.
 %Comment out from here
 %{
-#(ly:set-option 'point-and-click #t)
-%#(set-default-paper-size "a5" 'landscape)
-#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 18) % set staff-size when ready to print
-
-\include "Marsch_format.ly"
+\include "../../../Includes/Polis_format.ily"
 
 %...to here
 %}
+
   \score {
 
     % Svenska Polisens Marscher: 1. Title    
@@ -55,7 +50,7 @@
     	    	aes1-> |aes4-> (f8) r r2 |r4 c' (d c) |ees-> (bes) r2 
     	    	r4 bes (aes g) |f-> (c') r ees,-. |d-> (bes') r bes |ees,1~ 
     	    	ees4 r c'8-.\pp c-. c-. c-. 
-\pageBreak
+%\pageBreak
     	    	
     	    	\repeat volta 2 {
     	    	\key aes \major \time 4/4
@@ -82,8 +77,6 @@
     \header {
     	    piece = "Colonel Bogey"
     	    composer = "Kenneth J. Alford"
-    	}
-    \layout {ragged-last = ##t
     	}
     	
   }%end score

@@ -4,10 +4,10 @@
 %					  header.
 %Comment out from here
 %{
+#(ly:set-option 'relative-includes #t) 
 #(set-default-paper-size "a5" 'landscape)
-#(set-global-staff-size 18) % set staff-size when ready to print
 
-\include "Marsch_format.ly"
+\include "../../../Includes/Polis_format.ily"
 
 %...to here
 %}
@@ -43,8 +43,6 @@
     \header {
     	    piece = "PSALM 425 - Den blomstertid nu kommer"
     	    composer = "Trad."
-    	}
-    	\layout {ragged-last = ##t
     	}
   }%end score
 

@@ -1,17 +1,9 @@
 \version "2.18.0"
-% When ready to include in collection: 1. Comment out paper.
-% 				       2. Create include file of relative and
-%					  header.
+% When ready to include in collection:	1. Comment out top section with \Include file(s)
+%					2. \midi section if present.
 %Comment out from here  
 %{
-#(ly:set-option 'point-and-click #t)
-%#(set-default-paper-size "a5" 'landscape)
-#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 18) % set staff-size when ready to print
-
-OneBR = R1^\markup{\normalsize\number 1}
-
-\include "Marsch_format.ly"
+\include "../../../Includes/Polis_format.ily"
 
 %...to here
 %}
@@ -72,7 +64,5 @@ OneBR = R1^\markup{\normalsize\number 1}
     \header {
     	    piece = \markup {\concat {\char #214 "verste Tillman"}}
     	    composer = "Ingemar Badman"
-    	}
-    	\layout {ragged-last = ##t
     	}
   }%end score

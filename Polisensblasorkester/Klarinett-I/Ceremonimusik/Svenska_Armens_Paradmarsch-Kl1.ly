@@ -1,14 +1,13 @@
 \version "2.18.0"
-% When ready to include in collection: 1. Comment out paper.
+% When ready to include in collection: 1. Comment out paper, score.
 % 				       2. Create include file of relative and
 %					  header.
 %Comment out from here
 %{
-#(ly:set-option 'point-and-click #t)
+#(ly:set-option 'relative-includes #t) 
 #(set-default-paper-size "a5" 'landscape)
-#(set-global-staff-size 18) % set staff-size when ready to print
 
-\include "Marsch_format.ly"
+\include "../../../Includes/Polis_format.ily"
 
 %...to here
 %}
@@ -17,6 +16,7 @@
 % Svenska Polisens Marscher: 1. Svenska Polisens Paradmarsch
 \relative c''' { 
     \clef treble \time 2/2 \key f \major
+    \bar ".|:"
     \repeat volta 2 {
     a2^^\f c4.. d32 e |f8 [c16 c] c8 c c r c8.-> (d32 e 
     f8) r c8.-> (d32 e f8) r c8. (d32-> e

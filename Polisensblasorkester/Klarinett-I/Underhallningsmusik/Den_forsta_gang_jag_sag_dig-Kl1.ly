@@ -1,17 +1,12 @@
 \version "2.18.0"
-% When ready to include in collection: 1. Comment out paper.
-% 				       2. Create include file of relative and
-%					  header.
+% When ready to include in collection:	1. Comment out top section with \Include file(s)
+%					2. \midi section if present.
 %Comment out from here
 %{
-#(ly:set-option 'point-and-click #t)
-#(set-default-paper-size "a4" 'portrait)
-#(set-global-staff-size 18) % set staff-size when ready to print
+\include "../../../Includes/Polis_format.ily"
 
-\include "Marsch_format.ly"
-
-%}
 %...to here
+%}
 
   \score {
 
@@ -61,7 +56,5 @@
     \header {
     	    piece = \markup {\concat {"Den f"\char#246"rsta g"\char#229"ng jag s"\char#229"g dig"}}
     	    composer = \markup {\concat {"B. Sj"\char#246"berg"}}
-    	}
-    	\layout {ragged-last = ##t
     	}
   }%end score
