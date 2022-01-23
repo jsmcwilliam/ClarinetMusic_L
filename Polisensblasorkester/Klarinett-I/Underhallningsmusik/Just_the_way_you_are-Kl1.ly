@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 % When ready to include in collection:	1. Comment out top section with \Include file(s)
 %					2. \midi section if present.
 %Comment out from here
@@ -12,7 +12,7 @@
     % Svenska Polisens Marscher: 1. Just the way you are   
     \relative c'' { 
     	    \key c \major \time 4/4 
-    	    \compressFullBarRests
+    	    \compressEmptyMeasures
     	    \set Score.markFormatter = #format-mark-circle-barnumbers
     	    r4^\markup {\bold {Moderate rock}} c8--\mf (f~ f2) 
     	    r4 c8-- (a'~ a) g~ g4 |r4 c,8-- (f~ f2) |r4 c8-- (a'~ a) g~ g4 

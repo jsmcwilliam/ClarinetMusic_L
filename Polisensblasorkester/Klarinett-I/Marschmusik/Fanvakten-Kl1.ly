@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 % When ready to include in collection:	1. Comment out top section with \Include file(s)
 %					2. \midi section if present.
 %Comment out from here
@@ -13,7 +13,7 @@
     % Svenska Polisens Marscher: 1. Fanvakten    
     \relative c'' { 
     	\clef treble \key bes \major \time 2/2
-    	\compressFullBarRests
+    	\compressEmptyMeasures
     	
     	g'4\ff r bes2->~ |bes4 r r2 |r a4-> r |bes-> r f4.--\p bes8
         \repeat volta 2 {

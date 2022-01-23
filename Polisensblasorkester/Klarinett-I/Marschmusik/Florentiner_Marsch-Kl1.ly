@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 % When ready to include in collection: 1. Comment out top section with \Include file(s)
 %                                      2. \midi section if present
 %Comment out from here
@@ -13,7 +13,7 @@
     \relative c'' { 
     	    \key f \major \time 2/4 
     	    \tempo 4 = 100
-    	    \compressFullBarRests
+    	    \compressEmptyMeasures
     	    \set Score.markFormatter = #format-mark-box-letters
     \partial 8 r8
     \mark \markup {\bold  "Tempo di Marcia"}

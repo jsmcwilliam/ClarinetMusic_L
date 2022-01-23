@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 % When ready to include in collection:	1. Comment out top section with \Include file(s)
 %					2. \midi section if present.
 %Comment out from here
@@ -13,7 +13,7 @@
     \relative c'' {
     	  \key c \major \time 2/2 \clef treble
     	  \override DynamicLineSpanner.staff-padding = #2
-    	  \compressFullBarRests
+    	  \compressEmptyMeasures
     	  g'4.\f g8 fis (g) a g |c4. c8 b (c) d c |e2 d |c4 r8 g,\p fis (g) a g
     	  
     	  \repeat volta 2 {

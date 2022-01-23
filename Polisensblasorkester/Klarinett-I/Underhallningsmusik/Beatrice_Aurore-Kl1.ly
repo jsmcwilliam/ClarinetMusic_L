@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 % When ready to include in collection:	1. Comment out top section with \Include file(s)
 %					2. \midi section if present.
 %Comment out from here
@@ -12,7 +12,7 @@
     % Svenska Polisens Marscher: 1. Beatrice Aurore   
     \relative c'' { 
     	    \key bes \major \time 4/4 
-    	    \compressFullBarRests
+    	    \compressEmptyMeasures
     	    \set Score.markFormatter = #format-mark-box-letters
     	    \partial 4 d4\f^\markup {\bold {Moderato}} ( |f4.) f8 f2~ 
     	    f4 g (bes8 a g f |a4. f8) f2~ |f2. f4~

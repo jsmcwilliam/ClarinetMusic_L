@@ -13,7 +13,7 @@
     % Svenska Polisens Marscher: 1. Title    
     \relative c'' { 
     	    \key f \major \time 2/2 
-    	    \compressFullBarRests
+    	    \compressEmptyMeasures
     	    \set Score.markFormatter = #format-mark-box-letters
     	    R1*2 |c'1~\ff\startTrillSpan |c4\stopTrillSpan r r2 
     	    

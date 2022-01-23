@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.22.1"
 % When ready to include in collection:	1. Comment out top section with \Include file(s)
 %					2. \midi section if present.
 %Comment out from here
@@ -12,7 +12,7 @@
     % Svenska Polisens Marscher: 1. Hock Heideckburg    
     \relative c'' { 
     	    \key f \major \time 2/2 
-    	    \compressFullBarRests
+    	    \compressEmptyMeasures
     	    \set Score.markFormatter = #format-mark-box-letters
     \partial 4 r4
     R1*5  |  

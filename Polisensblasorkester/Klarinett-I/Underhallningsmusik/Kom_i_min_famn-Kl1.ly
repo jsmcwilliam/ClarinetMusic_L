@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 % When ready to include in collection:	1. Comment out top section with \Include file(s)
 %					2. \midi section if present.
 %Comment out from here
@@ -14,7 +14,7 @@
     	    \clef treble \key c \major \time 3/4
     	    \set Score.markFormatter = #format-mark-numbers
     	    \set Score.markFormatter = #format-mark-box-numbers
-    	    \compressFullBarRests
+    	    \compressEmptyMeasures
 
     	    e2.~\mf^\markup {\bold {Valse Mod.}} |e |ees~ |ees |f~ |f |d~\> |d 
     	    \bar "||"

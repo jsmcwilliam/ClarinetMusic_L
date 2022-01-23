@@ -13,7 +13,7 @@
     \relative c'' { 
     	    \pointAndClickOn
     	    \key f \major \time 2/2 
-    	    \compressFullBarRests
+    	    \compressEmptyMeasures
     	    \set Score.markFormatter = #format-mark-box-letters
     	    f2->\ff e-> |d4.-> e8 f4 e |d8 (cis d e) f (e f g) 
     	    a4 r\mf c,8 (cis) d e

@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 % When ready to include in collection:	1. Comment out top section with \Include file(s)
 %					2. \midi section if present.
 %Comment out from here
@@ -13,7 +13,7 @@
     \relative c'' { 
     	    \key bes \major \time 2/2 \clef treble
     	    \override DynamicLineSpanner.staff-padding = #2
-    	    \compressFullBarRests
+    	    \compressEmptyMeasures
     	    \grace {f16 (g a)} <bes f>4->\ff r r2 |r4 <bes f>8-> <bes f>->
     	    <bes f>2->
     	    \grace {bes16 (c cis)} d4-> r r2 |r4 <d bes>8-> <d bes>-> <d bes>2->
@@ -50,7 +50,8 @@
 	    \key ees \major \time 2/2
 	    \mark \markup {\bold "TRIO"}
 	    bes2-> d4-. c-. bes4.->\trill a16 (bes) 
-	    d4.->\trill c16 (d) |ees4 r r2 |R1
+	    d4.->\trill c16 (d) |ees4 r r2 |
+            \OneBR
 
 	    \repeat volta 2 {
 	    	    r4

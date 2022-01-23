@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 % When ready to include in collection:	1. Comment out top section with \Include file(s)
 %					2. \midi section if present.
 %Comment out from here
@@ -13,7 +13,7 @@
 
   	  \relative c'' {
     	    \clef treble \key g \major \time 3/4
-    	    \compressFullBarRests
+    	    \compressEmptyMeasures
     	    \pointAndClickOn
     	    
     	    \mark \markup { \musicglyph #"scripts.segno" }

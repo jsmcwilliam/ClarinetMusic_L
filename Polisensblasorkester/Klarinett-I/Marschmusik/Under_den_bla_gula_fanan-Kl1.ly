@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.22.1"
 % When ready to include in collection:	1. Comment out top section with \Include file(s)
 %					2. \midi section if present.
 %Comment out from here
@@ -13,7 +13,7 @@
 	\relative c'' { 
 		\clef treble
 		\time 2/2 \key ees \major
-		\compressFullBarRests
+		\compressEmptyMeasures
 		\set Score.markFormatter = #format-mark-box-letters
 		\override DynamicLineSpanner #'staff-padding = #2
 

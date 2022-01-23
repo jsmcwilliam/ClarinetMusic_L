@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 % When ready to include in collection:	1. Comment out top section with \Include file(s)
 %					2. \midi section if present.
 %Comment out from here
@@ -14,7 +14,7 @@
     % Svenska Polisens Marscher: 1. Kong Fredrick Honnormarch    
     \relative c'' { 
     	    \key c \major \time 2/2 
-    	    \compressFullBarRests
+    	    \compressEmptyMeasures
     	    \set Score.markFormatter = #format-mark-box-letters
     	     
     	    R1*2           |c'4.->\ff (b16 c) c4.-> (d16 c) |b4->  b8 b b4 r   |

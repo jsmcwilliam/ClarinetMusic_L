@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 % When ready to include in collection:	1. Comment out top section with \Include file(s)
 %					2. \midi section if present.
 %Comment out from here
@@ -12,7 +12,7 @@
     % Svenska Polisens Marscher: 1. Liberty Bell   
     \relative c'' { 
     	    \key g \major \time 6/8 
-    	    \compressFullBarRests
+    	    \compressEmptyMeasures
     	    \set Score.markFormatter = #format-mark-box-letters
     	    g'4\ff (fis8 e4 ees8 |d4 cis8 c4 b8) |a b c b4 a8 |d4 r8 r4 d8
     	    \repeat volta 2 {
@@ -53,9 +53,9 @@
     	    	   }
     	   r4 f8\ff f e d |c4 r8 r4 r8 |r4 f8\ff f e d |c4 r8 r4 r8 
     	   r4 f8\ff f e d |c4 c8 d c d |e4 r8 e4 r8 
-    	   \OneBarRest |r4 a8 a g f |e4 r8 r4 r8
+    	   R1*6/8 |r4 a8 a g f |e4 r8 r4 r8
     	   r4 a8 a g f |e4 r8 r4 r8 |r4 a8 a g f |e4 e8 fis e fis |g4 r8 g4-> r8
-    	   \OneBarRest |r4 r8 r4 fis8-> |g4-> d8-> g4-> r8
+    	   R1*6/8 |r4 r8 r4 fis8-> |g4-> d8-> g4-> r8
     	   r4 r8 r4 fis8-> |g4-> d8-> g4-> r8 |fis2. |g |aes2. |g4 r8 f!4.->
     	   \repeat volta 2 {
     	   	   e4.\f\< f |fis g\! |e8-> [r e] e [r dis] |e4.~ e4 g8 

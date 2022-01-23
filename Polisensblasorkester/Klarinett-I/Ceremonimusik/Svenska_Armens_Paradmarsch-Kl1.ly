@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 % When ready to include in collection: 1. Comment out paper, score.
 % 				       2. Create include file of relative and
 %					  header.
@@ -14,6 +14,7 @@
   \score {
   
 % Svenska Polisens Marscher: 1. Svenska Polisens Paradmarsch
+
 \relative c''' { 
     \clef treble \time 2/2 \key f \major
     \bar ".|:"
@@ -34,8 +35,9 @@
     c4.. b16 c8.b16 c8. a16 
     \acciaccatura a8 g8. fis16 g8. a16 bes8. c16 d8. e16
     f4 f, f r
-}
-    }%end relative
+      }
+ }%end relative
+    
 \header {
     piece = \markup {\concat {"Svenska Arm"\char#233"ns Paradmarsch"}}
     composer = ""

@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 % When ready to include in collection:	1. Comment out top section with \Include file(s)
 %					2. \midi section if present.
 %Comment out from here
@@ -12,7 +12,7 @@
     % Svenska Polisens Marscher: 1. Title    
     \relative c'' { 
     	    \key ees \major \time 4/4 
-    	    \compressFullBarRests
+    	    \compressEmptyMeasures
     	    \set Score.markFormatter = #format-mark-box-numbers
     	    \partial 4 g8\f^\markup {\bold {Moderato}} b |d2~ d8 d d d 
     	    d d ees4~ ees8 ees ees ees |ees-> r r4 r2 | r4 r g-> r |g r g r8 g 

@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 % When ready to include in collection:	1. Comment out top section with \Include file(s)
 %					2. \midi section if present.
 %Comment out from here
@@ -12,7 +12,7 @@
     % Svenska Polisens Marscher: 1. Sommar, sommar, sommar    
     \relative c''' {
     	    \time 3/4 \key f \major \clef treble
-    	    \compressFullBarRests
+    	    \compressEmptyMeasures
     	    \set Score.markFormatter = #format-mark-box-alphabet
     	    \override DynamicLineSpanner #'staff-padding = #2
     	    \set Staff.explicitKeySignatureVisibility = #begin-of-line-visible

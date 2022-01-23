@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 % When ready to include in collection:	1. Comment out top section with \Include file(s)
 %					2. \midi section if present.
 %Comment out from here
@@ -12,7 +12,7 @@
     % Svenska Polisens Marscher: 1. Islands in the stream   
     \relative c'' { 
     	    \key c \major \time 4/4 
-    	    \compressFullBarRests
+    	    \compressEmptyMeasures
     	    \set Score.markFormatter = #format-mark-circle-barnumbers
     	    r2^\markup {\bold {Moderately Slow Rock}} r8 e\mf\< (g c) 
     	    c4-^\f\> c2.->\! |r2 r8 e,\mf\< (g c) |c4-^\f\> c2.->\! \bar "||"

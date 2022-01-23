@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 % When ready to include in collection:	1. Comment out top section with \Include file(s)
 %					2. \midi section if present.
 %Comment out from here
@@ -12,7 +12,7 @@
     % Svenska Polisens Marscher: 1. Matador   
     \relative c'' { 
     	    \key f \major \time 4/4 
-    	    \compressFullBarRests
+    	    \compressEmptyMeasures
     	    \set Score.markFormatter = #format-mark-box-letters
     	    f2.\ff\<^\markup {\bold {Andante}} (d8. f16 |e2~\> e8 c a c)\mf
     	    d2.\< (bes4 |a2\> g)\pp

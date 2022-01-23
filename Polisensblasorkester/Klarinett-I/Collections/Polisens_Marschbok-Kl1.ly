@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 
 tocSection = #(define-music-function (parser location text) (markup?) 
         	(add-toc-item! 'tocSectionMarkup text)) 
@@ -16,9 +16,9 @@ logo = \markup {\epsfile #X #30 #"Polisens_logo.eps" }
 	  subsubtitle = "Klarinett I i Bb"
           picture = \logo
           copyright = \markup {
-    	    \line {\concat {"Malm" \char#246 "polisens Bl" \char#229 "sorkester. Kopierad: John S. McWilliam, (rev. " \date ")" }}}
-          %   	  tagline = "John S. McWilliam, 2019"
-
+    	    \line {\concat {"Malm" \char#246 "polisens Bl" \char#229
+    	                    "sorkester. Kopierad: John S. McWilliam, (rev. " \date ")" }}}
+          %tagline = "John S. McWilliam, 2019"
   }
 
 \paper {
@@ -48,7 +48,7 @@ logo = \markup {\epsfile #X #30 #"Polisens_logo.eps" }
 \pageBreak %after title page
 \markuplist \table-of-contents
 \pageBreak
-
+%
    \bookpart {
 	\header {
 	    title = "Ceremonimusiken"
@@ -65,11 +65,11 @@ logo = \markup {\epsfile #X #30 #"Polisens_logo.eps" }
     \include "../Ceremonimusik/Svenska_Armens_Paradmarsch-Kl1.ly" 	  
 
     \tocItem \markup {"4. PSALM 425 - Den blomstertid nu kommer."} 
-    \include "../Ceremonimusik/Den_blomstertid_nu_kommer-Kl1_ver2.ly" 	  
+    \include "../Ceremonimusik/Den_blomstertid_nu_kommer-Kl1.ly" 	  
   \pageBreak
 
    } %end bookpart
-  
+ %}
    \bookpart {
 	\header {
 	    title = "Marschmusiken"
@@ -103,52 +103,60 @@ logo = \markup {\epsfile #X #30 #"Polisens_logo.eps" }
     \include "../Marschmusik/Kong_Fredrick_Honnormarch-Kl1.ly"
   \pageBreak
 
-    \tocItem \markup {"7. Kungl. Vaxholms Kustartilleriregementets marsch"}
+    \tocItem \markup {"7. Kungl. Kronobergsregementets marsch"}
+    \include "../Marschmusik/Kungl_Kronobergs_Regementes_Marsch-Kl1.ly"	 
+  \pageBreak
+
+    \tocItem \markup {"8. Kungl. Vaxholms Kustartilleriregementets marsch"}
     \include "../Marschmusik/Kungl_vaxholms_artilleri-Kl1.ly"	 
   \pageBreak
 		
-    \tocItem \markup {"8. Liberty Bell"}
+    \tocItem \markup {"9. Liberty Bell"}
     \include "../Marschmusik/Liberty_Bell-Kl1.ly"
   \pageBreak
-
-    \tocItem \markup {"9. National Emblem"}
+%
+    \tocItem \markup {"10. National Emblem"}
     \include "../Marschmusik/National_emblem-Kl1.ly"
   \pageBreak
 
-    \tocItem \markup {"10. On the Square"}
+    \tocItem \markup {"11. On the Square"}
     \include "../Marschmusik/On_the_square-Kl1.ly"
   \pageBreak
 	
-    \tocItem \markup {"11. Our Director"}
+    \tocItem \markup {"12. Our Director"}
     \include "../Marschmusik/Our_director-Kl1.ly"
   \pageBreak
 
-    \tocItem \markup {\concat {"12. P" \char #229 " Vakt"}}
+    \tocItem \markup {\concat {"13. P" \char #229 " Vakt"}}
     \include "../Marschmusik/Pa_vakt-Kl1.ly"
   \pageBreak
  
-    \tocItem \markup {"13. Svensk Polismarsch"}
+     \tocItem \markup {"14. St. Louis Blues"}
+    \include "../Marschmusik/St_Louis_Blues-Kl1.ly"
+  \pageBreak
+ 
+    \tocItem \markup {"15. Svensk Polismarsch"}
     \include "../Marschmusik/Svensk_Polismarsch-Kl1.ly"
   \pageBreak
    	  
-    \tocItem \markup {"14. Svenska Fygarmarsch"}
+    \tocItem \markup {"16. Svenska Fygarmarsch"}
     \include "../Marschmusik/Svenska_Flygarmarschen-Kl1.ly"
   \pageBreak
 		
-    \tocItem \markup {\concat {"15. Under den bl" \char #229 " gula fanan"}}
+    \tocItem \markup {\concat {"18. Under den bl" \char #229 " gula fanan"}}
     \include "../Marschmusik/Under_den_bla_gula_fanan-Kl1.ly"
   \pageBreak
 
-    \tocItem \markup {"16. Vanished Army"}
+    \tocItem \markup {"19. Vanished Army"}
     \include "../Marschmusik/Vanished_army-Kl1.ly"	
   \pageBreak
 	 
-    \tocItem \markup {\concat {"17. " \char #214 "verste Tillman"}}
+    \tocItem \markup {\concat {"20. " \char #214 "verste Tillman"}}
     \include "../Marschmusik/Overste_Tillman-Kl1.ly"
   \pageBreak
 
  } %end bookpart		
-  
+ %
   \bookpart {
     \header {
 	title = \markup {\concat {"Underh" \char#229 "llningsmusiken"}}
@@ -256,8 +264,8 @@ logo = \markup {\epsfile #X #30 #"Polisens_logo.eps" }
 
     \tocItem \markup {"26. Wien_bleipt_Wien"}
     \include "../Underhallningsmusik/Wien_bleibt_wien-Kl1.ly"
-%}
-   } % end bookpart
 
+   } % end bookpart
+ %}   
 } %end book
 

@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 % When ready to include in collection:	1. Comment out top section with \Include file(s)
 %					2. \midi section if present.
 %Comment out from here
@@ -12,7 +12,7 @@
     % Svenska Polisens Marscher: 1. Title    
     \relative c'' { 
     	    \key f \major \time 3/4 
-    	    \compressFullBarRests
+    	    \compressEmptyMeasures
     	    \set Score.markFormatter = #format-mark-circle-letters
     	    
     c'4--\f c-- c-- |c-- c-- c-- |c-- c4.-- c8-- |bes2 (a4) |r8 d,,\< e [f g a] 

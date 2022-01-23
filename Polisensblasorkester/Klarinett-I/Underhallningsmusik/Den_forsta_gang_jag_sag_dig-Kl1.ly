@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 % When ready to include in collection:	1. Comment out top section with \Include file(s)
 %					2. \midi section if present.
 %Comment out from here
@@ -13,7 +13,7 @@
     % Svenska Polisens Marscher: 1. Den forsta gang jag sag dig   
     \relative c'' { 
     	    \key bes \major \time 2/2 
-    	    \compressFullBarRests
+    	    \compressEmptyMeasures
     	    \set Score.markFormatter = #format-mark-box-letters
     	    \partial 4 bes'4^\markup {\bold {Moderato}}\f ( |g a bes c |d f, bes d) 
     	    c1~ |c |bes4^\markup {\bold {T:o di Bossa Nova}} r r2 |r r4 f,8 (f' 

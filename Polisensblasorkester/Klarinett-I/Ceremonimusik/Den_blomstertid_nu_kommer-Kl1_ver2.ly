@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 % When ready to include in collection: 1. Comment out paper, score.
 % 				       2. Create include file of relative and
 %					  header.
@@ -16,7 +16,7 @@
     % Svenska Polisens Marscher: 1. Psalm 425 - Den blomstertid nu kommer    
     \relative c''' { 
     	    \key g \major \time 4/4 
-    	    \compressFullBarRests
+    	    \compressEmptyMeasures
     	    \set Score.markFormatter = #format-mark-box-letters
     	    r2 r4 d,^\markup {\upright\concat {  "F" \char#246 "rspel"}}|
     	    e g g fis| g2.\fermata
