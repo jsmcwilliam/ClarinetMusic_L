@@ -1,5 +1,4 @@
 \version "2.22.1"
-
 % When ready to include in collection: 1. Comment out paper, score.
 % 				       2. Create include file of relative and
 %					  header.
