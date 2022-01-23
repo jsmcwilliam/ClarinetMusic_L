@@ -1,5 +1,5 @@
-% Created on Sun Jun 24 11:43:01 CEST 2012
-\version "2.18.0"
+\version "2.22.1"
+
 % When ready to include in collection: 1. Comment out paper.
 % 				       2. Create include file of relative and
 %					  header.
